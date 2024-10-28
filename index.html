@@ -1,0 +1,2221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Nina.vn</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- link css Nina -->
+    <link rel="stylesheet" href="scss/style.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        /* Chiều rộng thanh cuộn dọc và chiều cao thanh cuộn ngang */
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            background: linear-gradient(180deg, #fe2f05 0, #fe2f05 50%, #fe2f05 100%);
+        }
+
+        /* Nút trên và dưới của thanh cuộn (không hiển thị vì đặt width và height = 0) */
+        ::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+
+        /* Đường ray của thanh cuộn */
+        ::-webkit-scrollbar-track {
+            background-color: #c3c3c3;
+        }
+
+        /* Phần của đường ray khi không có thanh cuộn */
+        ::-webkit-scrollbar-track-piece {
+            background-color: #f5f5f5;
+        }
+
+        /* Con lăn của thanh cuộn */
+        ::-webkit-scrollbar-thumb {
+            height: 50px;
+            background: linear-gradient(180deg, #fe2f05 0, #fe2f05 50%, #fe2f05 100%);
+        }
+
+        /* Góc giữa thanh cuộn ngang và dọc */
+        ::-webkit-scrollbar-corner {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nina-wrapper" class="font-OpenSans">
+        <!-- Header top-->
+        <div id="nina-top-header" class="d-none d-md-block bg-1-primary">
+            <div class="nina-container-top d-flex max-w-8xl grid-cols-12 text-white text-sm bg-danger">
+                <div class="col-6 d-flex menu-left ms-3">
+                    <div class="item">
+                        <i class="bi bi-phone"></i> Hotline: <b>0868842572</b> - Hỗ trợ kỹ thuật: <b>0868842572</b>
+                    </div>
+                    <div class="item ms-2">
+                        <i class="bi bi-envelope"></i>
+                        Email: <b>nina@truong.vn</b>
+                    </div>
+                </div>
+                <div class="col-6 d-flex justify-end align-item-center menu-right">
+                    <a class="item-menu" href="#" title="Gioi thieu">
+                        <i class="bi bi-globe me-1"></i>
+                        Giới thiệu
+                    </a>
+                    <div class="ml-2 pl-2 relative ul-menu">
+                        <i class="bi bi-info-circle"></i>
+                        Hướng dẫn
+                        <ul class="ul-infos-menu">
+                            <li>
+                                <a href="" class="pl-3">
+                                    <i class="bi bi-file-earmark-text"></i> Hướng dẫn quản trị website
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="pl-3">
+                                    <i class="bi bi-file-earmark-text"></i> Hướng dẫn tạo email
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="pl-3">
+                                    <i class="bi bi-file-earmark-text"></i> Hướng dẫn sử dụng email
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="item-menu" href="#">
+                        <i class="bi bi-box-arrow-in-right me-1"></i>
+                        Đăng nhập
+                    </a>
+                    <a class="item-menu" href="">
+                        <i class="bi bi-cart me-1"></i>
+                        Giỏ hàng <span>(0)</span>
+                    </a>
+                    <a class="item-menu btn-lss" href="">
+                        <i class="bi bi-crosshair me-1"></i>
+                        Gửi yêu cầu hỗ trợ
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End header top -->
+
+        <!-- Header nav menu-->
+        <div id="nina-nav-menu" class="bg-white">
+            <div class="nina-container-menu grid-cols-12 item-center d-flex">
+                <!-- logo -->
+                <div class="nina-logo col-3 ms-3">
+                    <a href="#">
+                        <img src="https://nina.vn/assets/images/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- nav menu -->
+                <ul class="nina-menu col-9">
+                    <div class="nina-logo-mobile" style="display: none;">
+                        <img src="https://nina.vn/assets/images/logo.png" alt="">
+                    </div>
+                    <div class="cart-mobile" style="display: none;">
+                        <li class="cart-mobile_icon"> <i class="bi bi-cart"></i><a href="">Giỏ hàng</a> <span>(0)</span></li>
+                        <li class="crosshair-mobile"><i class="bi bi-crosshair"></i><a href="">Gửi yêu cầu hỗ trợ</a></li>
+                    </div>
+                    <li class="domain">
+                        <a href="#">Tên miền <i class="bi bi-chevron-down"></i></a>
+                        <ul class="menu-domain ">
+                            <li><a href="#">Kiểm tra tên miền</a></li>
+                            <li><a href="#">Bản giá tên miền quốc tế</a></li>
+                            <li><a href="#">Bản giá tên miền việt nam</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Hosting</a></li>
+                    <li><a href="#">Email server</a></li>
+                    <li><a href="#">Thiết kế website</a></li>
+                    <li><a href="#">Mẫu giao diện</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li class="hidden-mobile"><a href="#">Tuyển dụng</a></li>
+                    <li class="to-gradient hidden-mobile"><a href="#" class="to-gradient-btn">Liên hệ tư vấn</a></li>
+                </ul>
+                <!-- icon menu -->
+                <div class="list-menu">
+                    <div class="list-menu_text">
+                        <i class="bi bi-headset"></i>
+                        <p>0868842572</p>
+                    </div>
+                    <div class="list-menu_icon">
+                        <i class="bi bi-list"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End header nav menu -->
+
+        <!-- Banner -->
+        <div class="nina-container-banner">
+            <div class="box-banner">
+            </div>
+            <div class="grid grid-cols-12 gap-0 item-center justify-between banner">
+                <div class="col-6 nina-box-domain">
+                    <div class="form-register-domain">
+                        <h3 class="h3-domain">Kiểm tra tên miền</h3>
+                        <p class="p-domain">Đăng ký tên miền ngay từ bây giờ để bảo vệ thương hiệu của bạn</p>
+                        <form>
+                            <div class="nina-input-search flex flex-box ">
+                                <input type="text" name="domain" class="input-search-domain"
+                                    placeholder="Nhập tên bạn muốn tìm kiếm...">
+                                <button class="search-domain"><i class="bi bi-search"></i></button>
+                            </div>
+                        </form>
+                        <div class="nina-swiper-slide-domain mt-4">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">.vn <span class="money-domain"> 825.000đ </span> <span
+                                            class="gift-icon"> <i class="bi bi-gift"></i></span></div>
+                                    <div class="swiper-slide">.com.vn <span class="money-domain"> 695.000đ </span> <span
+                                            class="gift-icon"> <i class="bi bi-gift"></i></span></div>
+                                    <div class="swiper-slide">.edu <span class="money-domain"> 400.000đ </span> <span
+                                            class="gift-icon"> <i class="bi bi-gift"></i></span></div>
+                                    <div class="swiper-slide">.online <span class="money-domain"> 400.000đ </span> <span
+                                            class="gift-icon"> <i class="bi bi-gift"></i></span></div>
+                                    <div class="swiper-slide">.net.vn <span class="money-domain"> 695.000đ </span> <span
+                                            class="gift-icon"> <i class="bi bi-gift"></i></span></div>
+                                    <div class="swiper-slide">.pro.vn <span class="money-domain"> 400.000đ </span> <span
+                                            class="gift-icon"> <i class="bi bi-gift"></i></span></div>
+                                    <div class="swiper-slide">.info <span class="money-domain"> 372.000đ </span> <span
+                                            class="gift-icon"> <i class="bi bi-gift"></i></span></div>
+                                    <div class="swiper-slide">.com <span class="money-domain"> 423.000đ </span> <span
+                                            class="gift-icon"> <i class="bi bi-gift"></i></span></div>
+                                </div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-prev">
+                                    <i class="bi bi-chevron-left"></i>
+                                </div>
+                                <div class="swiper-next">
+                                    <i class="bi bi-chevron-right"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 nina-overlay py-6">
+                    <div class="nina-img-ani">
+                        <img class="img" src="images/banner-1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End banner -->
+
+        <!-- Service page -->
+        <div class="nina-service-page clearfix">
+            <div class="nina-container-service">
+                <div class="nina-service-box d-flex text-center">
+                    <!-- nina-service-box_float -->
+                    <div class="col-6 h-100 nina-service-box_float">
+                        <div class="nina-service-box_float_images">
+                            <div class="nina-service-box_float_images__bg">
+                            </div>
+                            <img class="nina-service-box_float_images__child"
+                                src="https://nina.vn/assets/images/services/main-pic.png" alt="">
+                        </div>
+                    </div>
+                    <!-- nina-service-box_right -->
+                    <div class="col-6 h-100 nina-service-box_right">
+                        <div class="nina-service-content">
+                            <div class="nina-service-item col-6 ">
+                                <div class="nina-service-wrap bg-white">
+                                    <div class="nina-service-icon">
+                                        <div class="icon-box relative">
+                                            <div class="nina-service-icon">
+                                                <img src="https://media.nina.vn/upload/news/thiet-ke-web-site-3681.svg"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="dot dot1"></div>
+                                        <div class="dot dot2"></div>
+                                    </div>
+                                    <div class="nina-service-text text-center ">
+                                        <div class="box-text">
+                                            <h3>Thiết kế website</h3>
+                                            <p>
+                                                Website, đầy đủ tính năng chính của website. Tất cả các tính năng đều có
+                                                thể quản trị nội dung thông qua trang quản trị
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nina-service-item col-6">
+                                <div class="nina-service-wrap bg-white">
+                                    <div class="nina-service-icon">
+                                        <div class="icon-box relative">
+                                            <div class="nina-service-icon">
+                                                <img src="https://media.nina.vn/upload/news/hosting-6159.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="dot dot1"></div>
+                                        <div class="dot dot2"></div>
+                                    </div>
+                                    <div class="nina-service-text text-center ">
+                                        <div class="box-text">
+                                            <h3>Thiết kế website</h3>
+                                            <p>
+                                                Website, đầy đủ tính năng chính của website. Tất cả các tính năng đều có
+                                                thể quản trị nội dung thông qua trang quản trị
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nina-service-item col-6">
+                                <div class="nina-service-wrap bg-white">
+                                    <div class="nina-service-icon">
+                                        <div class="icon-box relative">
+                                            <div class="nina-service-icon">
+                                                <img src="https://media.nina.vn/upload/news/domain-7590.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="dot dot1"></div>
+                                        <div class="dot dot2"></div>
+                                    </div>
+                                    <div class="nina-service-text text-center ">
+                                        <div class="box-text">
+                                            <h3>Thiết kế website</h3>
+                                            <p>
+                                                Website, đầy đủ tính năng chính của website. Tất cả các tính năng đều có
+                                                thể quản trị nội dung thông qua trang quản trị
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nina-service-item col-6">
+                                <div class="nina-service-wrap bg-white">
+                                    <div class="nina-service-icon">
+                                        <div class="icon-box relative">
+                                            <div class="nina-service-icon">
+                                                <img src="https://media.nina.vn/upload/news/email-server-2210.svg"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="dot dot1"></div>
+                                        <div class="dot dot2"></div>
+                                    </div>
+                                    <div class="nina-service-text text-center">
+                                        <div class="box-text">
+                                            <h3 class="font-bold">Thiết kế website</h3>
+                                            <p>
+                                                Website, đầy đủ tính năng chính của website. Tất cả các tính năng đều có
+                                                thể quản trị nội dung thông qua trang quản trị
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End service page -->
+
+        <!-- Nina domain page -->
+        <div class="nina-domain-page">
+            <div class="nina-domain-page_box-image">
+                <div class="image-pattern_left">
+                    <img src="images/service-pattern-3.png" alt="">
+                </div>
+                <div class="image-pattern_right float-right">
+                    <img src="images/service-pattern-4.png" alt="">
+                </div>
+            </div>
+            <div class="nina-domain-page_box-container grid grid-cols-12 row">
+                <div class="col-6 nina-domain-page_box-container__box1">
+                    <h3>Bảng giá Tên miền Việt Nam</h3>
+                    <div class="animate-border"></div>
+                    <p>Tên miền Tiếng Việt nằm trong hệ thống tên miền quốc gia Việt Nam ".vn", thuộc hệ thống tên miền
+                        đa ngữ IDNS đã được quốc tế công nhận, là xu thế phát triển của công nghiệp nội dung Internet.
+                        <br> Trong đó các ký tự tạo nên tên miền là các ký tự được quy định trong bảng mã tiếng Việt.
+                    </p>
+                    <div class="nina-domain-page_box__column-domain grid-cols-12 grid">
+                        <div class="item">
+                            <p>.vn</p> <span>825.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.edu.vn</p> <span>400.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.net.vn</p> <span>695.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.com.vn</p> <span>695.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.gov.vn</p> <span>400.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.info.vn</p> <span>400.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                    </div>
+                    <div class="nina-readmore">
+                        <a href="#" class="nina-readmore_btn"><span class="nina-readmore_btn__text">Xem thêm bảng
+                                giá</span><span class="icon-arrow-right"><i
+                                    class="bi bi-arrow-right float-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-6 nina-domain-page_box-container__box2">
+                    <img src="images/banner-1.png" alt="">
+                </div>
+                <div class="col-6 col-6 nina-domain-page_box-container__box3">
+                    <img src="https://nina.vn/assets/images/counter.png" alt="">
+                </div>
+                <div class="col-6 col-6 nina-domain-page_box-container__box4">
+                    <h3>Bảng giá Tên miền Việt Nam</h3>
+                    <div class="animate-border"></div>
+                    <p>Tên miền Tiếng Việt nằm trong hệ thống tên miền quốc gia Việt Nam ".vn", thuộc hệ thống tên miền
+                        đa ngữ IDNS đã được quốc tế công nhận, là xu thế phát triển của công nghiệp nội dung Internet.
+                        <br> Trong đó các ký tự tạo nên tên miền là các ký tự được quy định trong bảng mã tiếng Việt.
+                    </p>
+                    <div class="nina-domain-page_box__column-domain grid-cols-12 grid">
+                        <div class="item">
+                            <p>.vn</p> <span>825.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.edu.vn</p> <span>400.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.net.vn</p> <span>695.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.com.vn</p> <span>695.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.gov.vn</p> <span>400.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                        <div class="item">
+                            <p>.info.vn</p> <span>400.000đ</span>
+                            <div class="item_icon-shopping-cart-domain"><i class="bi bi-cart2"></i></div>
+                        </div>
+                    </div>
+                    <div class="nina-readmore">
+                        <a href="#" class="nina-readmore_btn"><span class="nina-readmore_btn__text">Xem thêm bảng
+                                giá</span><span class="icon-arrow-right"><i
+                                    class="bi bi-arrow-right float-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End nina domain page -->
+
+        <!-- Nina hosting page -->
+        <div class="nina-hosting-page">
+            <div class="nina-hosting-page_container">
+                <div class="nina-hosting-page_container__title">
+                    <h3 class="text-h3-hosting">BẢNG GIÁ HOST TẠI NINA</h3>
+                    <div class="animate-border"></div>
+                    <p class="text-hosting mt-3">Website của bạn sẽ bảo mật, ổn định và nhanh gấp nhiều lần khi sử dụng
+                        hosting tại NINA</p>
+                </div>
+                <div class="nina-hosting-page_container__tabs">
+                    <div class="nina-hosting-nav-tabs">
+                        <div class="tabs tabs1">Hosting Phổ Thông</div>
+                        <div class="tabs">Hosting Thương Mại</div>
+                        <div class="tabs">Hosting Vip</div>
+                    </div>
+                </div>
+                <div class="nina-hosting-page_container__table">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="nina-item-hosting">
+                                    <div class="nina-item-hosting_header item-hosting_header1">
+                                        <div class="nina-item-hosting_header__title">
+                                            <h2>GÓI 2GB</h2>
+                                            <div class="nina-desc"></div>
+                                        </div>
+                                        <div class="nina-item-hosting_header__price">
+                                            <div class="nina-text price1">Chỉ từ</div>
+                                            <div class="nina-text price2">406.000</div>
+                                            <div class="nina-text price3">vnđ/tháng</div>
+                                        </div>
+                                    </div>
+                                    <div class="nina-item-hosting_body">
+                                        <ul>
+                                            <li>
+                                                <div class="text-hosting_left">Dung lượng</div>
+                                                <div class="text-hosting_right">2GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Băng thông</div>
+                                                <div class="text-hosting_right">40GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Subdomain</div>
+                                                <div class="text-hosting_right">10</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Mysql</div>
+                                                <div class="text-hosting_right">2</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Địa chỉ email</div>
+                                                <div class="text-hosting_right">60</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Backup</div>
+                                                <div class="text-hosting_right">Miễn phí</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">
+                                                    <span class="text-hosting">Chi phí/năm</span>
+                                                    <br>
+                                                    <span class="text-hosting-vat">(Chưa bao gồm VAT)</span>
+                                                </div>
+                                                <div class="text-hosting_right"><span
+                                                        class="money-hosting">2.388.000đ</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="nina-readmore">
+                                        <a href="#" class="nina-readmore_btn"><span class="nina-readmore_btn__text">Đăng
+                                                ký ngay</span><span class="icon-arrow-right"><i
+                                                    class="bi bi-arrow-right float-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="nina-item-hosting">
+                                    <div class="nina-item-hosting_header item-hosting_header2">
+                                        <div class="nina-item-hosting_header__title">
+                                            <h2>GÓI 2GB</h2>
+                                            <div class="nina-desc"></div>
+                                        </div>
+                                        <div class="nina-item-hosting_header__price">
+                                            <div class="nina-text price1">Chỉ từ</div>
+                                            <div class="nina-text price2">406.000</div>
+                                            <div class="nina-text price3">vnđ/tháng</div>
+                                        </div>
+                                    </div>
+                                    <div class="nina-item-hosting_body">
+                                        <ul>
+                                            <li>
+                                                <div class="text-hosting_left">Dung lượng</div>
+                                                <div class="text-hosting_right">2GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Băng thông</div>
+                                                <div class="text-hosting_right">40GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Subdomain</div>
+                                                <div class="text-hosting_right">10</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Mysql</div>
+                                                <div class="text-hosting_right">2</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Địa chỉ email</div>
+                                                <div class="text-hosting_right">60</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Backup</div>
+                                                <div class="text-hosting_right">Miễn phí</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">
+                                                    <span class="text-hosting">Chi phí/năm</span>
+                                                    <br>
+                                                    <span class="text-hosting-vat">(Chưa bao gồm VAT)</span>
+                                                </div>
+                                                <div class="text-hosting_right"><span
+                                                        class="money-hosting">2.388.000đ</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="nina-readmore">
+                                        <a href="#" class="nina-readmore_btn"><span class="nina-readmore_btn__text">Đăng
+                                                ký ngay</span><span class="icon-arrow-right"><i
+                                                    class="bi bi-arrow-right float-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="nina-item-hosting">
+                                    <div class="nina-item-hosting_header item-hosting_header3">
+                                        <div class="nina-item-hosting_header__title">
+                                            <h2>GÓI 2GB</h2>
+                                            <div class="nina-desc"></div>
+                                        </div>
+                                        <div class="nina-item-hosting_header__price">
+                                            <div class="nina-text price1">Chỉ từ</div>
+                                            <div class="nina-text price2">406.000</div>
+                                            <div class="nina-text price3">vnđ/tháng</div>
+                                        </div>
+                                    </div>
+                                    <div class="nina-item-hosting_body">
+                                        <ul>
+                                            <li>
+                                                <div class="text-hosting_left">Dung lượng</div>
+                                                <div class="text-hosting_right">2GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Băng thông</div>
+                                                <div class="text-hosting_right">40GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Subdomain</div>
+                                                <div class="text-hosting_right">10</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Mysql</div>
+                                                <div class="text-hosting_right">2</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Địa chỉ email</div>
+                                                <div class="text-hosting_right">60</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Backup</div>
+                                                <div class="text-hosting_right">Miễn phí</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">
+                                                    <span class="text-hosting">Chi phí/năm</span>
+                                                    <br>
+                                                    <span class="text-hosting-vat">(Chưa bao gồm VAT)</span>
+                                                </div>
+                                                <div class="text-hosting_right"><span
+                                                        class="money-hosting">2.388.000đ</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="nina-readmore">
+                                        <a href="#" class="nina-readmore_btn"><span class="nina-readmore_btn__text">Đăng
+                                                ký ngay</span><span class="icon-arrow-right"><i
+                                                    class="bi bi-arrow-right float-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="nina-item-hosting">
+                                    <div class="nina-item-hosting_header item-hosting_header4">
+                                        <div class="nina-item-hosting_header__title">
+                                            <h2>GÓI 2GB</h2>
+                                            <div class="nina-desc"></div>
+                                        </div>
+                                        <div class="nina-item-hosting_header__price">
+                                            <div class="nina-text price1">Chỉ từ</div>
+                                            <div class="nina-text price2">406.000</div>
+                                            <div class="nina-text price3">vnđ/tháng</div>
+                                        </div>
+                                    </div>
+                                    <div class="nina-item-hosting_body">
+                                        <ul>
+                                            <li>
+                                                <div class="text-hosting_left">Dung lượng</div>
+                                                <div class="text-hosting_right">2GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Băng thông</div>
+                                                <div class="text-hosting_right">40GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Subdomain</div>
+                                                <div class="text-hosting_right">10</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Mysql</div>
+                                                <div class="text-hosting_right">2</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Địa chỉ email</div>
+                                                <div class="text-hosting_right">60</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Backup</div>
+                                                <div class="text-hosting_right">Miễn phí</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">
+                                                    <span class="text-hosting">Chi phí/năm</span>
+                                                    <br>
+                                                    <span class="text-hosting-vat">(Chưa bao gồm VAT)</span>
+                                                </div>
+                                                <div class="text-hosting_right"><span
+                                                        class="money-hosting">2.388.000đ</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="nina-readmore">
+                                        <a href="#" class="nina-readmore_btn"><span class="nina-readmore_btn__text">Đăng
+                                                ký ngay</span><span class="icon-arrow-right"><i
+                                                    class="bi bi-arrow-right float-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="nina-item-hosting">
+                                    <div class="nina-item-hosting_header item-hosting_header5">
+                                        <div class="nina-item-hosting_header__title">
+                                            <h2>GÓI 2GB</h2>
+                                            <div class="nina-desc"></div>
+                                        </div>
+                                        <div class="nina-item-hosting_header__price">
+                                            <div class="nina-text price1">Chỉ từ</div>
+                                            <div class="nina-text price2">406.000</div>
+                                            <div class="nina-text price3">vnđ/tháng</div>
+                                        </div>
+                                    </div>
+                                    <div class="nina-item-hosting_body">
+                                        <ul>
+                                            <li>
+                                                <div class="text-hosting_left">Dung lượng</div>
+                                                <div class="text-hosting_right">2GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Băng thông</div>
+                                                <div class="text-hosting_right">40GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Subdomain</div>
+                                                <div class="text-hosting_right">10</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Mysql</div>
+                                                <div class="text-hosting_right">2</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Địa chỉ email</div>
+                                                <div class="text-hosting_right">60</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Backup</div>
+                                                <div class="text-hosting_right">Miễn phí</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">
+                                                    <span class="text-hosting">Chi phí/năm</span>
+                                                    <br>
+                                                    <span class="text-hosting-vat">(Chưa bao gồm VAT)</span>
+                                                </div>
+                                                <div class="text-hosting_right"><span
+                                                        class="money-hosting">2.388.000đ</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="nina-readmore">
+                                        <a href="#" class="nina-readmore_btn"><span class="nina-readmore_btn__text">Đăng
+                                                ký ngay</span><span class="icon-arrow-right"><i
+                                                    class="bi bi-arrow-right float-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="nina-item-hosting">
+                                    <div class="nina-item-hosting_header item-hosting_header6">
+                                        <div class="nina-item-hosting_header__title">
+                                            <h2>GÓI 2GB</h2>
+                                            <div class="nina-desc"></div>
+                                        </div>
+                                        <div class="nina-item-hosting_header__price">
+                                            <div class="nina-text price1">Chỉ từ</div>
+                                            <div class="nina-text price2">406.000</div>
+                                            <div class="nina-text price3">vnđ/tháng</div>
+                                        </div>
+                                    </div>
+                                    <div class="nina-item-hosting_body">
+                                        <ul>
+                                            <li>
+                                                <div class="text-hosting_left">Dung lượng</div>
+                                                <div class="text-hosting_right">2GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Băng thông</div>
+                                                <div class="text-hosting_right">40GB</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Subdomain</div>
+                                                <div class="text-hosting_right">10</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Mysql</div>
+                                                <div class="text-hosting_right">2</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Địa chỉ email</div>
+                                                <div class="text-hosting_right">60</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">Backup</div>
+                                                <div class="text-hosting_right">Miễn phí</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-hosting_left">
+                                                    <span class="text-hosting">Chi phí/năm</span>
+                                                    <br>
+                                                    <span class="text-hosting-vat">(Chưa bao gồm VAT)</span>
+                                                </div>
+                                                <div class="text-hosting_right"><span
+                                                        class="money-hosting">2.388.000đ</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="nina-readmore">
+                                        <a href="#" class="nina-readmore_btn"><span class="nina-readmore_btn__text">Đăng
+                                                ký ngay</span><span class="icon-arrow-right"><i
+                                                    class="bi bi-arrow-right float-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-prev">
+                            <i class="bi bi-chevron-left"></i>
+                        </div>
+                        <div class="swiper-next">
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Nina hosting page -->
+
+        <!-- table web design -->
+        <div class="table-web-design">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" fill="#FFFFFF">
+                <path class="shape-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+                c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+                c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+            </svg>
+            <div class="table-web-design_header">
+                <h2>BẢNG GIÁ THIẾT KẾ TRỌN GÓI</h2>
+                <div class="animate-border"></div>
+                <p class="table-web-design_header__text">Tạo website chuyên nghiệp với giao diện đẹp mắt, hỗ trợ mua sắm
+                    online tiện lợi sẽ khiến cho khách hàng yêu quý, tin tưởng hơn vào sản phẩm và thương hiệu của bạn.
+                </p>
+            </div>
+            <div class="table-web-design_body-table">
+                <!-- box item-design-->
+                <div class="item-design item-design1">
+                    <div class="item-design_header">
+                        <div class="item-design_header__title">
+                            Gói cơ bản 01
+                        </div>
+                        <div class="item-design_header__nav item-design_header__nav1">
+                            <span>Giá:</span>
+                            <div class="item-design__text-contact">Liên hệ</div>
+                        </div>
+                    </div>
+                    <div class="item-design_body">
+                        <ul class="item-design_body__text">
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Website cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tìm kiếm cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tối ưu link</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đăng ký nhận tin</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Popup quảng cáo</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đóng dấu hình ảnh
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Nút gọi điện, chat zalo/facebook
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Google dịch
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mục lục bài viết/Sản phẩm
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mobile / Responsive
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-design_footer">
+                        <i class="bi bi-send-fill"></i>
+                        <span>Đăng ký ngay</span>
+                    </div>
+                </div>
+                <div class="item-design item-design2">
+                    <div class="item-design_header">
+                        <div class="item-design_header__title">
+                            Gói cơ bản 01
+                        </div>
+                        <div class="item-design_header__nav item-design_header__nav8">
+                            <span>Giá:</span>
+                            <div class="item-design__text-contact">Liên hệ</div>
+                        </div>
+                    </div>
+                    <div class="item-design_body">
+                        <ul class="item-design_body__text">
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Website cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tìm kiếm cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tối ưu link</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đăng ký nhận tin</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Popup quảng cáo</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đóng dấu hình ảnh
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Nút gọi điện, chat zalo/facebook
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Google dịch
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mục lục bài viết/Sản phẩm
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mobile / Responsive
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-design_footer">
+                        <i class="bi bi-send-fill"></i>
+                        <span>Đăng ký ngay</span>
+                    </div>
+                </div>
+                <div class="item-design item-design3">
+                    <div class="item-design_header">
+                        <div class="item-design_header__title">
+                            Gói cơ bản 01
+                        </div>
+                        <div class="item-design_header__nav item-design_header__nav9">
+                            <span>Giá:</span>
+                            <div class="item-design__text-contact">Liên hệ</div>
+                        </div>
+                    </div>
+                    <div class="item-design_body">
+                        <ul class="item-design_body__text">
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Website cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tìm kiếm cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tối ưu link</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đăng ký nhận tin</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Popup quảng cáo</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đóng dấu hình ảnh
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Nút gọi điện, chat zalo/facebook
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Google dịch
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mục lục bài viết/Sản phẩm
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mobile / Responsive
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-design_footer">
+                        <i class="bi bi-send-fill"></i>
+                        <span>Đăng ký ngay</span>
+                    </div>
+                </div>
+                <div class="item-design item-design4">
+                    <div class="item-design_header">
+                        <div class="item-design_header__title">
+                            Gói cơ bản 01
+                        </div>
+                        <div class="item-design_header__nav item-design_header__nav2">
+                            <span>Giá:</span>
+                            <div class="item-design__text-contact">Liên hệ</div>
+                        </div>
+                    </div>
+                    <div class="item-design_body">
+                        <ul class="item-design_body__text">
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Website cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tìm kiếm cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tối ưu link</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đăng ký nhận tin</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Popup quảng cáo</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đóng dấu hình ảnh
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Nút gọi điện, chat zalo/facebook
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Google dịch
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mục lục bài viết/Sản phẩm
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mobile / Responsive
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-design_footer">
+                        <i class="bi bi-send-fill"></i>
+                        <span>Đăng ký ngay</span>
+                    </div>
+                </div>
+                <div class="item-design item-design5">
+                    <div class="item-design_header">
+                        <div class="item-design_header__title">
+                            Gói cơ bản 01
+                        </div>
+                        <div class="item-design_header__nav item-design_header__nav3">
+                            <span>Giá:</span>
+                            <div class="item-design__text-contact">Liên hệ</div>
+                        </div>
+                    </div>
+                    <div class="item-design_body">
+                        <ul class="item-design_body__text">
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Website cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tìm kiếm cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tối ưu link</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đăng ký nhận tin</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Popup quảng cáo</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đóng dấu hình ảnh
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Nút gọi điện, chat zalo/facebook
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Google dịch
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mục lục bài viết/Sản phẩm
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mobile / Responsive
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-design_footer">
+                        <i class="bi bi-send-fill"></i>
+                        <span>Đăng ký ngay</span>
+                    </div>
+                </div>
+                <div class="item-design item-design6">
+                    <div class="item-design_header">
+                        <div class="item-design_header__title">
+                            Gói cơ bản 01
+                        </div>
+                        <div class="item-design_header__nav item-design_header__nav4">
+                            <span>Giá:</span>
+                            <div class="item-design__text-contact">Liên hệ</div>
+                        </div>
+                    </div>
+                    <div class="item-design_body">
+                        <ul class="item-design_body__text">
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Website cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tìm kiếm cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tối ưu link</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đăng ký nhận tin</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Popup quảng cáo</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đóng dấu hình ảnh
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Nút gọi điện, chat zalo/facebook
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Google dịch
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mục lục bài viết/Sản phẩm
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mobile / Responsive
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-design_footer">
+                        <i class="bi bi-send-fill"></i>
+                        <span>Đăng ký ngay</span>
+                    </div>
+                </div>
+                <div class="item-design item-design7">
+                    <div class="item-design_header">
+                        <div class="item-design_header__title">
+                            Gói cơ bản 01
+                        </div>
+                        <div class="item-design_header__nav item-design_header__nav5">
+                            <span>Giá:</span>
+                            <div class="item-design__text-contact">Liên hệ</div>
+                        </div>
+                    </div>
+                    <div class="item-design_body">
+                        <ul class="item-design_body__text">
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Website cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tìm kiếm cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tối ưu link</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đăng ký nhận tin</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Popup quảng cáo</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đóng dấu hình ảnh
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Nút gọi điện, chat zalo/facebook
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Google dịch
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mục lục bài viết/Sản phẩm
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mobile / Responsive
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-design_footer">
+                        <i class="bi bi-send-fill"></i>
+                        <span>Đăng ký ngay</span>
+                    </div>
+                </div>
+                <div class="item-design item-design8">
+                    <div class="item-design_header">
+                        <div class="item-design_header__title">
+                            Gói cơ bản 01
+                        </div>
+                        <div class="item-design_header__nav item-design_header__nav6">
+                            <span>Giá:</span>
+                            <div class="item-design__text-contact">Liên hệ</div>
+                        </div>
+                    </div>
+                    <div class="item-design_body">
+                        <ul class="item-design_body__text">
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Website cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tìm kiếm cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tối ưu link</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đăng ký nhận tin</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Popup quảng cáo</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đóng dấu hình ảnh
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Nút gọi điện, chat zalo/facebook
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Google dịch
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mục lục bài viết/Sản phẩm
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mobile / Responsive
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-design_footer">
+                        <i class="bi bi-send-fill"></i>
+                        <span>Đăng ký ngay</span>
+                    </div>
+                </div>
+                <div class="item-design item-design9">
+                    <div class="item-design_header">
+                        <div class="item-design_header__title">
+                            Gói cơ bản 01
+                        </div>
+                        <div class="item-design_header__nav item-design_header__nav7">
+                            <span>Giá:</span>
+                            <div class="item-design__text-contact">Liên hệ</div>
+                        </div>
+                    </div>
+                    <div class="item-design_body">
+                        <ul class="item-design_body__text">
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Website cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tìm kiếm cơ bản</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Tối ưu link</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đăng ký nhận tin</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Popup quảng cáo</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Đóng dấu hình ảnh
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/checked1.png" alt="">
+                                </span>
+                                <p>Nút gọi điện, chat zalo/facebook
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Google dịch
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mục lục bài viết/Sản phẩm
+                                </p>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/close1.png" alt="">
+                                </span>
+                                <p>Mobile / Responsive
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-design_footer">
+                        <i class="bi bi-send-fill"></i>
+                        <span>Đăng ký ngay</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End table web design -->
+
+        <div class="nina-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" fill="#FCF3F4">
+                <path class="fill-custom" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+                c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+                c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+            </svg>
+        </div>
+
+        <!-- Process page -->
+        <div class="nina-process-page">
+            <!-- box icon image -->
+            <img class="box-icon-image2 icon1" src="images/icon/202.svg" alt="">
+            <img class="box-icon-image2 icon2" src="images/icon/207.svg" alt="">
+            <img class="box-icon-image1 icon3" src="images/icon/209.svg" alt="">
+            <img class="box-icon-image1 icon4" src="images/icon/203.svg" alt="">
+            <!-- end box icon image -->
+            <div class="nina-container">
+                <div class="nina-process-page_header">
+                    <h2>QUY TRÌNH THIẾT KẾ WEBSITE</h2>
+                    <div class="animate-border"></div>
+                    <p class="table-web-design_header__text mt-3">Chỉ với 5 bước đơn giản dưới đây bạn đã sở hữu một
+                        website chuyên nghiệp.
+                    </p>
+                </div>
+                <div class="nina-process-page_body">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" fill="#FCF3F4" y="0px" viewBox="0 0 1920 300"
+                        style="enable-background:new 0 0 1920 300;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path class="fill-none stroke-[#919191] stroke-2 animate-stroke"
+                                    d="M17.78,285.033
+                                    C164.595,165.04,381.282,60.637,626.5,81.5c273.79,23.293,420.812,156.217,682,178c151.812,12.661,327.587-0.056,600.938-249.333"></path>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <div class="nina-process-page_box">
+                        <div class="nina-process-item-cycle item-cycle1">
+                            <span class="count">01</span>
+                            <div class="item-cycle_img mx-auto">
+                                <img src="https://media.nina.vn/upload/news/b1-2275.svg" alt="">
+                                <h3 class="item-cycle_img__text">Tư vẫn khách hàng</h3>
+                            </div>
+                        </div>
+                        <div class="nina-process-item-cycle item-cycle2">
+                            <span class="count">02</span>
+                            <div class="item-cycle_img mx-auto">
+                                <img src="https://media.nina.vn/upload/news/b2-8437.svg" alt="">
+                                <h3 class="item-cycle_img__text">Thiết kế giao diện</h3>
+                            </div>
+                        </div>
+                        <div class="nina-process-item-cycle item-cycle3">
+                            <span class="count">03</span>
+                            <div class="item-cycle_img mx-auto">
+                                <img src="https://media.nina.vn/upload/news/b3-2229.svg" alt="">
+                                <h3 class="item-cycle_img__text">Khách hàng duyệt giao diện</h3>
+                            </div>
+                        </div>
+                        <div class="nina-process-item-cycle item-cycle4">
+                            <span class="count">04</span>
+                            <div class="item-cycle_img mx-auto">
+                                <img src="https://media.nina.vn/upload/news/b4-1110.svg" alt="">
+                                <h3 class="item-cycle_img__text">Triển khai dự án</h3>
+                            </div>
+                        </div>
+                        <div class="nina-process-item-cycle item-cycle5">
+                            <span class="count">05</span>
+                            <div class="item-cycle_img mx-auto">
+                                <img src="https://media.nina.vn/upload/news/b5-1985.svg" alt="">
+                                <h3 class="item-cycle_img__text">Nghiệm thu dự án</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- box icon image -->
+            <img class="box-icon-image1 icon5" src="images/icon/206.svg" alt="">
+            <img class="box-icon-image3 icon6" src="images/icon/204.svg" alt="">
+            <!-- end box icon image -->
+        </div>
+        <!--End Process page -->
+
+        <!-- Nina benefit page -->
+        <div class="nina-benefit-page">
+            <div class="nina-container">
+                <div class="nina-benefit-box1 col-6">
+                    <div class="nina-benefit-box1_header">
+                        <h2>Ưu Điểm Nổi Bật Của Dịch Vụ
+                            Thiết Kế Website Tại NINA</h2>
+                        <p>Chúng tôi luôn đồng hành cùng khách hàng của mình trong việc xây dựng nền tảng Marketing phù
+                            hợp, hướng đến sự nhận diện thương hiệu thật dễ dàng và phát triển đơn hàng một cách bền
+                            vững.</p>
+                    </div>
+                    <div class="nina-benefit-box1_body">
+                        <img src="images/icon/imacs.svg" alt="">
+                    </div>
+                    <img class="nina-benefit_img" src="images/Subtract.svg" alt="">
+                </div>
+                <div class="nina-benefit-box2 col-6 row">
+                    <div class="col-6 item-benefit-box2-1">
+                        <div class="item-benefit_child child1 gap-5">
+                            <!-- <div class="icon"> -->
+                            <div class="img-icon img-icon1"></div>
+                            <!-- </div> -->
+
+                            <div class="item-benefit_child_body">
+                                <h4>Chi phí hợp lý</h4>
+                                <p>Nina cung cấp dịch vụ thiết kế website chất lượng, theo yêu cầu với chi phí hợp lý,
+                                    phù hợp với nhu cầu và ngân sách của từng doanh nghiệp.</p>
+                            </div>
+                        </div>
+                        <div class="item-benefit_child">
+                            <div class="img-icon img-icon2">
+                            </div>
+                            <div class="item-benefit_child_body">
+                                <h4>Chi phí hợp lý</h4>
+                                <p>Nina cung cấp dịch vụ thiết kế website chất lượng, theo yêu cầu với chi phí hợp lý,
+                                    phù hợp với nhu cầu và ngân sách của từng doanh nghiệp.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 item-benefit-box2-2">
+                        <div class="item-benefit_child">
+                            <div class="img-icon img-icon3">
+                            </div>
+                            <div class="item-benefit_child_body">
+                                <h4>Chi phí hợp lý</h4>
+                                <p>Nina cung cấp dịch vụ thiết kế website chất lượng, theo yêu cầu với chi phí hợp lý,
+                                    phù hợp với nhu cầu và ngân sách của từng doanh nghiệp.</p>
+                            </div>
+                        </div>
+                        <div class="item-benefit_child">
+                            <div class="img-icon img-icon4">
+                            </div>
+                            <div class="item-benefit_child_body">
+                                <h4>Chi phí hợp lý</h4>
+                                <p>Nina cung cấp dịch vụ thiết kế website chất lượng, theo yêu cầu với chi phí hợp lý,
+                                    phù hợp với nhu cầu và ngân sách của từng doanh nghiệp.</p>
+                            </div>
+                        </div>
+                        <div class="item-benefit_child">
+                            <div class="img-icon img-icon5">
+                            </div>
+                            <div class="item-benefit_child_body">
+                                <h4>Chi phí hợp lý</h4>
+                                <p>Nina cung cấp dịch vụ thiết kế website chất lượng, theo yêu cầu với chi phí hợp lý,
+                                    phù hợp với nhu cầu và ngân sách của từng doanh nghiệp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nina-bottom">
+                    <div class="nina-benefit-page_bottom">
+                        <div class="nina-benefit-page_bottom__header">
+                            <h3>NINA sẵn sàng để xây dựng, vận hành website cho bạn.</h3>
+                            <p>Gọi ngay cho chúng tôi để sử dụng dịch vụ.</p>
+                            <div class="nina-box-span">
+                                <span class="nina-box-span_item"><i class="bi bi-headset"></i> 0868842572</span>
+                                <span class="nina-box-span_item"><i class="bi bi-headset"></i> 0868842572</span>
+                            </div>
+                        </div>
+                        <div class="nina-benefit-page_bottom__box-body">
+                            <div class="box-body">
+                                <p>Bạn đang phân vân hoặc cần tư vấn về thiết kế web, tên miền, hosting...</p>
+                                <h3>Gọi ngay 0868842572</h3>
+                                <p>Để được tư vấn hỗ trợ miễn phí</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--End Nina benefit page -->
+
+        <!-- Nina footer -->
+        <div class="nina-footer">
+            <div class="nina-footer_box1 row">
+                <div class="nina-footer_box1__child-item1 row">
+                    <div class="nina-footer_box1__child-item1___box1">
+                        <h4 class="toggleList">THÔNG TIN CHUNG</h4>
+                        <ul class="infoList">
+                            <li>Giới thiệu</li>
+                            <li>Hỗ trợ</li>
+                            <li>Chính sách bảo mật</li>
+                            <li>Hướng dẫn thanh toán</li>
+                        </ul>
+                    </div>
+                    <div class="nina-footer_box1__child-item1___box2">
+                        <h4 class="toggleList">DỊCH VỤ CUNG CẤP</h4>
+                        <ul class="infoList">
+                            <li>Dịch vụ hosting</li>
+                            <li>Dịch vụ email server</li>
+                            <li>Dịch vụ tên miền</li>
+                            <li>Dịch vụ thiết kế website</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="nina-footer_box1__child-item2 row">
+                    <div class="nina-footer_box1__child-item2___box1">
+                        <h4 class="toggleList">Thông tin cần biết</h4>
+                        <ul class="infoList">
+                            <li>Văn bản pháp lý</li>
+                            <li>Thoả thuận bảo mật thông tin</li>
+                            <li>Thoả thuận sử dụng</li>
+                            <li>Các quy định về tên miền .vn</li>
+                            <li>Quy định sử dụng tên miền quốc tế</li>
+                            <li>Vòng đời tên miền quốc tế</li>
+                            <li>Biểu mẩu hồ sơ</li>
+                        </ul>
+                    </div>
+                    <div class="nina-footer_box1__child-item2___box2">
+                        <h4>NINA-Đồng hành cùng khách hàng</h4>
+                        <p class="text-gray">Bạn đang cần thiết kế website? Hãy để lại thông tin, nhân viên của chúng
+                            tôi sẽ liên hệ quý khách trong vòng 24h</p>
+                        <div class="box-contact">
+                            <p>Liên hệ ngay</p> <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="box-bottom row">
+                            <div class="box-bottom_item1 col-4">
+                                <div class="box-bottom_item1__box">Tải ứng dụng <span>NINA</span> ngay</div>
+                                <div class="box-bottom_item1__box box2">Tải ứng dụng <span>NINA ID</span> ngay</div>
+                            </div>
+                            <div class="box-bottom_item2 col-8 row">
+                                <div class="box-bottom_item2__box col-6">
+                                    <img src="images/icon/app_ios.png" alt="">
+                                </div>
+                                <div class="box-bottom_item2__box col-6">
+                                    <img src="images/icon/app_google.png" alt="">
+                                </div>
+                                <div class="box-bottom_item2__box col-6">
+                                    <img src="images/icon/app_ios.png" alt="">
+                                </div>
+                                <div class="box-bottom_item2__box col-6">
+                                    <img src="images/icon/app_google.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nina-footer_box2">
+                <div class="nina-container row">
+                    <div class="nina-footer_box2__item1">
+                        <img src="images/logo-white.png" alt="">
+                        <img src="images/logodathongbaovoibocongthuong6223-2649.webp" alt="">
+                        <img src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=3941590e-df8c-4b6c-883a-948077f92099"
+                            alt="">
+                    </div>
+                    <div class="nina-footer_box2__item2">
+                        <p>Lầu 3, Tòa nhà SaigonTel, Lô 46, CVPM Quang Trung, P. Tân Chánh Hiệp, Q. 12, TP HCM</p>
+                        <p>Tel: 028.37154879 - Fax: 028.37154878</p>
+                        <p>Email: nina@nina.vn</p>
+                        <p>Mã số thuế: 0310179646</p>
+                        <p>Tài khoản: 305686868</p>
+                        <p>Mở tại: Ngân hàng TMCP Quân đội (MBBANK) - Chi Nhánh TP. HCM – PGD Trường Chinh</p>
+                    </div>
+                    <div class="nina-footer_box2__item3">
+                        <p>Copyright © 2010 - 2024 CÔNG TY TNHH TM & DV NINA</p>
+                        <p class="text-footer">All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Nina footer -->
+
+        <!-- Nina phone-->
+        <section class="nina-phone">
+            <div class="nina-container">
+                <div class="nina-phone_item">
+                    <div class="icon-phone">
+                        <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: matrix(1.3, 0, 0, 1.3, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out;"
+                            width="512" height="512" viewBox="0 0 5120 5120">
+                            <!-- Các phần tử khác -->
+                            <g id="l18WaNzASAFTe8JlrGqbsEJ" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l3twHw1QEH7RJNJgf5c4Z88" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l59gmrALw3aWqrbfxRFdwLm" fill="#FFFFFF" style="transform: none;">
+                                <path id="pfdfWWiDF"
+                                    d="M1787 4550 c-173 -22 -315 -168 -338 -348 -11 -87 -11 -3197 0 -3284 24 -182 161 -322 342 -348 84 -12 1454 -12 1538 0 181 26 318 166 342 348 11 87 11 3197 0 3284 -24 185 -164 325 -347 349 -82 10 -1454 10 -1537 -1z m1598 -169 c46 -20 101 -79 121 -127 12 -28 14 -308 14 -1694 0 -1821 5 -1690 -61 -1765 -51 -57 -97 -75 -204 -75 l-91 0 -69 141 c-39 77 -78 148 -89 157 -16 15 -54 17 -366 17 -312 0 -350 -2 -366 -17 -11 -9 -50 -80 -89 -157 l-69 -141 -169 0 c-120 0 -177 4 -201 14 -48 20 -107 75 -127 121 -18 38 -19 116 -19 1705 0 1589 1 1667 19 1705 20 44 78 100 125 121 25 11 182 13 816 13 738 1 787 -1 825 -18z m-432 -3576 c20 -42 37 -78 37 -80 0 -3 -157 -5 -350 -5 -192 0 -350 2 -350 5 0 2 17 38 37 80 l37 75 276 0 276 0 37 -75z">
+                                </path>
+                                <path id="pxXeKZWkb"
+                                    d="M637 3391 c-93 -99 -196 -279 -247 -431 -73 -215 -82 -486 -24 -717 45 -181 155 -390 272 -516 61 -64 115 -63 142 2 14 35 11 42 -81 162 -105 138 -172 290 -205 466 -22 121 -15 365 14 475 46 170 114 306 221 438 33 41 61 85 61 96 0 37 -37 74 -74 74 -27 0 -42 -10 -79 -49z">
+                                </path>
+                                <path id="p9ysbfrHT"
+                                    d="M4351 3414 c-12 -15 -21 -36 -21 -48 0 -11 28 -55 61 -96 107 -132 175 -269 221 -438 26 -99 36 -339 18 -450 -27 -173 -103 -352 -204 -485 -98 -128 -100 -133 -86 -168 14 -34 37 -49 74 -49 52 0 201 203 277 379 72 168 100 310 100 506 0 307 -113 610 -305 823 -40 43 -54 52 -81 52 -24 0 -39 -7 -54 -26z">
+                                </path>
+                                <path id="pIw8rb4bv"
+                                    d="M994 3068 c-70 -75 -136 -202 -165 -319 -37 -147 -23 -351 33 -482 56 -133 142 -247 185 -247 36 0 59 15 72 49 14 32 7 53 -35 104 -34 40 -91 163 -109 232 -8 32 -15 102 -15 155 0 149 37 262 125 386 50 70 54 90 24 128 -30 38 -76 36 -115 -6z">
+                                </path>
+                                <path id="pLiDNpJ8L"
+                                    d="M4011 3074 c-30 -38 -26 -58 24 -128 88 -124 125 -237 125 -386 0 -53 -7 -123 -15 -155 -18 -69 -75 -192 -109 -232 -42 -51 -49 -72 -35 -104 25 -61 81 -66 132 -10 111 123 178 312 178 501 0 189 -67 378 -178 501 -44 49 -90 54 -122 13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-name-phone">
+                        <p>MT.Truong</p>
+                        <span>0868842572</span>
+                    </div>
+                </div>
+                <div class="nina-phone_item">
+                    <div class="icon-phone">
+                        <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: matrix(1.3, 0, 0, 1.3, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out;"
+                            width="512" height="512" viewBox="0 0 5120 5120">
+                            <!-- Các phần tử khác -->
+                            <g id="l18WaNzASAFTe8JlrGqbsEJ" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l3twHw1QEH7RJNJgf5c4Z88" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l59gmrALw3aWqrbfxRFdwLm" fill="#FFFFFF" style="transform: none;">
+                                <path id="pfdfWWiDF"
+                                    d="M1787 4550 c-173 -22 -315 -168 -338 -348 -11 -87 -11 -3197 0 -3284 24 -182 161 -322 342 -348 84 -12 1454 -12 1538 0 181 26 318 166 342 348 11 87 11 3197 0 3284 -24 185 -164 325 -347 349 -82 10 -1454 10 -1537 -1z m1598 -169 c46 -20 101 -79 121 -127 12 -28 14 -308 14 -1694 0 -1821 5 -1690 -61 -1765 -51 -57 -97 -75 -204 -75 l-91 0 -69 141 c-39 77 -78 148 -89 157 -16 15 -54 17 -366 17 -312 0 -350 -2 -366 -17 -11 -9 -50 -80 -89 -157 l-69 -141 -169 0 c-120 0 -177 4 -201 14 -48 20 -107 75 -127 121 -18 38 -19 116 -19 1705 0 1589 1 1667 19 1705 20 44 78 100 125 121 25 11 182 13 816 13 738 1 787 -1 825 -18z m-432 -3576 c20 -42 37 -78 37 -80 0 -3 -157 -5 -350 -5 -192 0 -350 2 -350 5 0 2 17 38 37 80 l37 75 276 0 276 0 37 -75z">
+                                </path>
+                                <path id="pxXeKZWkb"
+                                    d="M637 3391 c-93 -99 -196 -279 -247 -431 -73 -215 -82 -486 -24 -717 45 -181 155 -390 272 -516 61 -64 115 -63 142 2 14 35 11 42 -81 162 -105 138 -172 290 -205 466 -22 121 -15 365 14 475 46 170 114 306 221 438 33 41 61 85 61 96 0 37 -37 74 -74 74 -27 0 -42 -10 -79 -49z">
+                                </path>
+                                <path id="p9ysbfrHT"
+                                    d="M4351 3414 c-12 -15 -21 -36 -21 -48 0 -11 28 -55 61 -96 107 -132 175 -269 221 -438 26 -99 36 -339 18 -450 -27 -173 -103 -352 -204 -485 -98 -128 -100 -133 -86 -168 14 -34 37 -49 74 -49 52 0 201 203 277 379 72 168 100 310 100 506 0 307 -113 610 -305 823 -40 43 -54 52 -81 52 -24 0 -39 -7 -54 -26z">
+                                </path>
+                                <path id="pIw8rb4bv"
+                                    d="M994 3068 c-70 -75 -136 -202 -165 -319 -37 -147 -23 -351 33 -482 56 -133 142 -247 185 -247 36 0 59 15 72 49 14 32 7 53 -35 104 -34 40 -91 163 -109 232 -8 32 -15 102 -15 155 0 149 37 262 125 386 50 70 54 90 24 128 -30 38 -76 36 -115 -6z">
+                                </path>
+                                <path id="pLiDNpJ8L"
+                                    d="M4011 3074 c-30 -38 -26 -58 24 -128 88 -124 125 -237 125 -386 0 -53 -7 -123 -15 -155 -18 -69 -75 -192 -109 -232 -42 -51 -49 -72 -35 -104 25 -61 81 -66 132 -10 111 123 178 312 178 501 0 189 -67 378 -178 501 -44 49 -90 54 -122 13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-name-phone">
+                        <p>MT.Truong</p>
+                        <span>0868842572</span>
+                    </div>
+                </div>
+                <div class="nina-phone_item">
+                    <div class="icon-phone">
+                        <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: matrix(1.3, 0, 0, 1.3, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out;"
+                            width="512" height="512" viewBox="0 0 5120 5120">
+                            <!-- Các phần tử khác -->
+                            <g id="l18WaNzASAFTe8JlrGqbsEJ" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l3twHw1QEH7RJNJgf5c4Z88" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l59gmrALw3aWqrbfxRFdwLm" fill="#FFFFFF" style="transform: none;">
+                                <path id="pfdfWWiDF"
+                                    d="M1787 4550 c-173 -22 -315 -168 -338 -348 -11 -87 -11 -3197 0 -3284 24 -182 161 -322 342 -348 84 -12 1454 -12 1538 0 181 26 318 166 342 348 11 87 11 3197 0 3284 -24 185 -164 325 -347 349 -82 10 -1454 10 -1537 -1z m1598 -169 c46 -20 101 -79 121 -127 12 -28 14 -308 14 -1694 0 -1821 5 -1690 -61 -1765 -51 -57 -97 -75 -204 -75 l-91 0 -69 141 c-39 77 -78 148 -89 157 -16 15 -54 17 -366 17 -312 0 -350 -2 -366 -17 -11 -9 -50 -80 -89 -157 l-69 -141 -169 0 c-120 0 -177 4 -201 14 -48 20 -107 75 -127 121 -18 38 -19 116 -19 1705 0 1589 1 1667 19 1705 20 44 78 100 125 121 25 11 182 13 816 13 738 1 787 -1 825 -18z m-432 -3576 c20 -42 37 -78 37 -80 0 -3 -157 -5 -350 -5 -192 0 -350 2 -350 5 0 2 17 38 37 80 l37 75 276 0 276 0 37 -75z">
+                                </path>
+                                <path id="pxXeKZWkb"
+                                    d="M637 3391 c-93 -99 -196 -279 -247 -431 -73 -215 -82 -486 -24 -717 45 -181 155 -390 272 -516 61 -64 115 -63 142 2 14 35 11 42 -81 162 -105 138 -172 290 -205 466 -22 121 -15 365 14 475 46 170 114 306 221 438 33 41 61 85 61 96 0 37 -37 74 -74 74 -27 0 -42 -10 -79 -49z">
+                                </path>
+                                <path id="p9ysbfrHT"
+                                    d="M4351 3414 c-12 -15 -21 -36 -21 -48 0 -11 28 -55 61 -96 107 -132 175 -269 221 -438 26 -99 36 -339 18 -450 -27 -173 -103 -352 -204 -485 -98 -128 -100 -133 -86 -168 14 -34 37 -49 74 -49 52 0 201 203 277 379 72 168 100 310 100 506 0 307 -113 610 -305 823 -40 43 -54 52 -81 52 -24 0 -39 -7 -54 -26z">
+                                </path>
+                                <path id="pIw8rb4bv"
+                                    d="M994 3068 c-70 -75 -136 -202 -165 -319 -37 -147 -23 -351 33 -482 56 -133 142 -247 185 -247 36 0 59 15 72 49 14 32 7 53 -35 104 -34 40 -91 163 -109 232 -8 32 -15 102 -15 155 0 149 37 262 125 386 50 70 54 90 24 128 -30 38 -76 36 -115 -6z">
+                                </path>
+                                <path id="pLiDNpJ8L"
+                                    d="M4011 3074 c-30 -38 -26 -58 24 -128 88 -124 125 -237 125 -386 0 -53 -7 -123 -15 -155 -18 -69 -75 -192 -109 -232 -42 -51 -49 -72 -35 -104 25 -61 81 -66 132 -10 111 123 178 312 178 501 0 189 -67 378 -178 501 -44 49 -90 54 -122 13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-name-phone">
+                        <p>MT.Truong</p>
+                        <span>0868842572</span>
+                    </div>
+                </div>
+                <div class="nina-phone_item">
+                    <div class="icon-phone">
+                        <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: matrix(1.3, 0, 0, 1.3, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out;"
+                            width="512" height="512" viewBox="0 0 5120 5120">
+                            <!-- Các phần tử khác -->
+                            <g id="l18WaNzASAFTe8JlrGqbsEJ" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l3twHw1QEH7RJNJgf5c4Z88" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l59gmrALw3aWqrbfxRFdwLm" fill="#FFFFFF" style="transform: none;">
+                                <path id="pfdfWWiDF"
+                                    d="M1787 4550 c-173 -22 -315 -168 -338 -348 -11 -87 -11 -3197 0 -3284 24 -182 161 -322 342 -348 84 -12 1454 -12 1538 0 181 26 318 166 342 348 11 87 11 3197 0 3284 -24 185 -164 325 -347 349 -82 10 -1454 10 -1537 -1z m1598 -169 c46 -20 101 -79 121 -127 12 -28 14 -308 14 -1694 0 -1821 5 -1690 -61 -1765 -51 -57 -97 -75 -204 -75 l-91 0 -69 141 c-39 77 -78 148 -89 157 -16 15 -54 17 -366 17 -312 0 -350 -2 -366 -17 -11 -9 -50 -80 -89 -157 l-69 -141 -169 0 c-120 0 -177 4 -201 14 -48 20 -107 75 -127 121 -18 38 -19 116 -19 1705 0 1589 1 1667 19 1705 20 44 78 100 125 121 25 11 182 13 816 13 738 1 787 -1 825 -18z m-432 -3576 c20 -42 37 -78 37 -80 0 -3 -157 -5 -350 -5 -192 0 -350 2 -350 5 0 2 17 38 37 80 l37 75 276 0 276 0 37 -75z">
+                                </path>
+                                <path id="pxXeKZWkb"
+                                    d="M637 3391 c-93 -99 -196 -279 -247 -431 -73 -215 -82 -486 -24 -717 45 -181 155 -390 272 -516 61 -64 115 -63 142 2 14 35 11 42 -81 162 -105 138 -172 290 -205 466 -22 121 -15 365 14 475 46 170 114 306 221 438 33 41 61 85 61 96 0 37 -37 74 -74 74 -27 0 -42 -10 -79 -49z">
+                                </path>
+                                <path id="p9ysbfrHT"
+                                    d="M4351 3414 c-12 -15 -21 -36 -21 -48 0 -11 28 -55 61 -96 107 -132 175 -269 221 -438 26 -99 36 -339 18 -450 -27 -173 -103 -352 -204 -485 -98 -128 -100 -133 -86 -168 14 -34 37 -49 74 -49 52 0 201 203 277 379 72 168 100 310 100 506 0 307 -113 610 -305 823 -40 43 -54 52 -81 52 -24 0 -39 -7 -54 -26z">
+                                </path>
+                                <path id="pIw8rb4bv"
+                                    d="M994 3068 c-70 -75 -136 -202 -165 -319 -37 -147 -23 -351 33 -482 56 -133 142 -247 185 -247 36 0 59 15 72 49 14 32 7 53 -35 104 -34 40 -91 163 -109 232 -8 32 -15 102 -15 155 0 149 37 262 125 386 50 70 54 90 24 128 -30 38 -76 36 -115 -6z">
+                                </path>
+                                <path id="pLiDNpJ8L"
+                                    d="M4011 3074 c-30 -38 -26 -58 24 -128 88 -124 125 -237 125 -386 0 -53 -7 -123 -15 -155 -18 -69 -75 -192 -109 -232 -42 -51 -49 -72 -35 -104 25 -61 81 -66 132 -10 111 123 178 312 178 501 0 189 -67 378 -178 501 -44 49 -90 54 -122 13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-name-phone">
+                        <p>MT.Truong</p>
+                        <span>0868842572</span>
+                    </div>
+                </div>
+                <div class="nina-phone_item">
+                    <div class="icon-phone">
+                        <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: matrix(1.3, 0, 0, 1.3, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out;"
+                            width="512" height="512" viewBox="0 0 5120 5120">
+                            <!-- Các phần tử khác -->
+                            <g id="l18WaNzASAFTe8JlrGqbsEJ" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l3twHw1QEH7RJNJgf5c4Z88" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l59gmrALw3aWqrbfxRFdwLm" fill="#FFFFFF" style="transform: none;">
+                                <path id="pfdfWWiDF"
+                                    d="M1787 4550 c-173 -22 -315 -168 -338 -348 -11 -87 -11 -3197 0 -3284 24 -182 161 -322 342 -348 84 -12 1454 -12 1538 0 181 26 318 166 342 348 11 87 11 3197 0 3284 -24 185 -164 325 -347 349 -82 10 -1454 10 -1537 -1z m1598 -169 c46 -20 101 -79 121 -127 12 -28 14 -308 14 -1694 0 -1821 5 -1690 -61 -1765 -51 -57 -97 -75 -204 -75 l-91 0 -69 141 c-39 77 -78 148 -89 157 -16 15 -54 17 -366 17 -312 0 -350 -2 -366 -17 -11 -9 -50 -80 -89 -157 l-69 -141 -169 0 c-120 0 -177 4 -201 14 -48 20 -107 75 -127 121 -18 38 -19 116 -19 1705 0 1589 1 1667 19 1705 20 44 78 100 125 121 25 11 182 13 816 13 738 1 787 -1 825 -18z m-432 -3576 c20 -42 37 -78 37 -80 0 -3 -157 -5 -350 -5 -192 0 -350 2 -350 5 0 2 17 38 37 80 l37 75 276 0 276 0 37 -75z">
+                                </path>
+                                <path id="pxXeKZWkb"
+                                    d="M637 3391 c-93 -99 -196 -279 -247 -431 -73 -215 -82 -486 -24 -717 45 -181 155 -390 272 -516 61 -64 115 -63 142 2 14 35 11 42 -81 162 -105 138 -172 290 -205 466 -22 121 -15 365 14 475 46 170 114 306 221 438 33 41 61 85 61 96 0 37 -37 74 -74 74 -27 0 -42 -10 -79 -49z">
+                                </path>
+                                <path id="p9ysbfrHT"
+                                    d="M4351 3414 c-12 -15 -21 -36 -21 -48 0 -11 28 -55 61 -96 107 -132 175 -269 221 -438 26 -99 36 -339 18 -450 -27 -173 -103 -352 -204 -485 -98 -128 -100 -133 -86 -168 14 -34 37 -49 74 -49 52 0 201 203 277 379 72 168 100 310 100 506 0 307 -113 610 -305 823 -40 43 -54 52 -81 52 -24 0 -39 -7 -54 -26z">
+                                </path>
+                                <path id="pIw8rb4bv"
+                                    d="M994 3068 c-70 -75 -136 -202 -165 -319 -37 -147 -23 -351 33 -482 56 -133 142 -247 185 -247 36 0 59 15 72 49 14 32 7 53 -35 104 -34 40 -91 163 -109 232 -8 32 -15 102 -15 155 0 149 37 262 125 386 50 70 54 90 24 128 -30 38 -76 36 -115 -6z">
+                                </path>
+                                <path id="pLiDNpJ8L"
+                                    d="M4011 3074 c-30 -38 -26 -58 24 -128 88 -124 125 -237 125 -386 0 -53 -7 -123 -15 -155 -18 -69 -75 -192 -109 -232 -42 -51 -49 -72 -35 -104 25 -61 81 -66 132 -10 111 123 178 312 178 501 0 189 -67 378 -178 501 -44 49 -90 54 -122 13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-name-phone">
+                        <p>MT.Truong</p>
+                        <span>0868842572</span>
+                    </div>
+                </div>
+                <div class="nina-phone_item">
+                    <div class="icon-phone">
+                        <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: matrix(1.3, 0, 0, 1.3, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out;"
+                            width="512" height="512" viewBox="0 0 5120 5120">
+                            <!-- Các phần tử khác -->
+                            <g id="l18WaNzASAFTe8JlrGqbsEJ" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l3twHw1QEH7RJNJgf5c4Z88" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l59gmrALw3aWqrbfxRFdwLm" fill="#FFFFFF" style="transform: none;">
+                                <path id="pfdfWWiDF"
+                                    d="M1787 4550 c-173 -22 -315 -168 -338 -348 -11 -87 -11 -3197 0 -3284 24 -182 161 -322 342 -348 84 -12 1454 -12 1538 0 181 26 318 166 342 348 11 87 11 3197 0 3284 -24 185 -164 325 -347 349 -82 10 -1454 10 -1537 -1z m1598 -169 c46 -20 101 -79 121 -127 12 -28 14 -308 14 -1694 0 -1821 5 -1690 -61 -1765 -51 -57 -97 -75 -204 -75 l-91 0 -69 141 c-39 77 -78 148 -89 157 -16 15 -54 17 -366 17 -312 0 -350 -2 -366 -17 -11 -9 -50 -80 -89 -157 l-69 -141 -169 0 c-120 0 -177 4 -201 14 -48 20 -107 75 -127 121 -18 38 -19 116 -19 1705 0 1589 1 1667 19 1705 20 44 78 100 125 121 25 11 182 13 816 13 738 1 787 -1 825 -18z m-432 -3576 c20 -42 37 -78 37 -80 0 -3 -157 -5 -350 -5 -192 0 -350 2 -350 5 0 2 17 38 37 80 l37 75 276 0 276 0 37 -75z">
+                                </path>
+                                <path id="pxXeKZWkb"
+                                    d="M637 3391 c-93 -99 -196 -279 -247 -431 -73 -215 -82 -486 -24 -717 45 -181 155 -390 272 -516 61 -64 115 -63 142 2 14 35 11 42 -81 162 -105 138 -172 290 -205 466 -22 121 -15 365 14 475 46 170 114 306 221 438 33 41 61 85 61 96 0 37 -37 74 -74 74 -27 0 -42 -10 -79 -49z">
+                                </path>
+                                <path id="p9ysbfrHT"
+                                    d="M4351 3414 c-12 -15 -21 -36 -21 -48 0 -11 28 -55 61 -96 107 -132 175 -269 221 -438 26 -99 36 -339 18 -450 -27 -173 -103 -352 -204 -485 -98 -128 -100 -133 -86 -168 14 -34 37 -49 74 -49 52 0 201 203 277 379 72 168 100 310 100 506 0 307 -113 610 -305 823 -40 43 -54 52 -81 52 -24 0 -39 -7 -54 -26z">
+                                </path>
+                                <path id="pIw8rb4bv"
+                                    d="M994 3068 c-70 -75 -136 -202 -165 -319 -37 -147 -23 -351 33 -482 56 -133 142 -247 185 -247 36 0 59 15 72 49 14 32 7 53 -35 104 -34 40 -91 163 -109 232 -8 32 -15 102 -15 155 0 149 37 262 125 386 50 70 54 90 24 128 -30 38 -76 36 -115 -6z">
+                                </path>
+                                <path id="pLiDNpJ8L"
+                                    d="M4011 3074 c-30 -38 -26 -58 24 -128 88 -124 125 -237 125 -386 0 -53 -7 -123 -15 -155 -18 -69 -75 -192 -109 -232 -42 -51 -49 -72 -35 -104 25 -61 81 -66 132 -10 111 123 178 312 178 501 0 189 -67 378 -178 501 -44 49 -90 54 -122 13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-name-phone">
+                        <p>MT.Truong</p>
+                        <span>0868842572</span>
+                    </div>
+                </div>
+                <div class="nina-phone_item">
+                    <div class="icon-phone">
+                        <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: matrix(1.3, 0, 0, 1.3, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out;"
+                            width="512" height="512" viewBox="0 0 5120 5120">
+                            <!-- Các phần tử khác -->
+                            <g id="l18WaNzASAFTe8JlrGqbsEJ" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l3twHw1QEH7RJNJgf5c4Z88" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l59gmrALw3aWqrbfxRFdwLm" fill="#FFFFFF" style="transform: none;">
+                                <path id="pfdfWWiDF"
+                                    d="M1787 4550 c-173 -22 -315 -168 -338 -348 -11 -87 -11 -3197 0 -3284 24 -182 161 -322 342 -348 84 -12 1454 -12 1538 0 181 26 318 166 342 348 11 87 11 3197 0 3284 -24 185 -164 325 -347 349 -82 10 -1454 10 -1537 -1z m1598 -169 c46 -20 101 -79 121 -127 12 -28 14 -308 14 -1694 0 -1821 5 -1690 -61 -1765 -51 -57 -97 -75 -204 -75 l-91 0 -69 141 c-39 77 -78 148 -89 157 -16 15 -54 17 -366 17 -312 0 -350 -2 -366 -17 -11 -9 -50 -80 -89 -157 l-69 -141 -169 0 c-120 0 -177 4 -201 14 -48 20 -107 75 -127 121 -18 38 -19 116 -19 1705 0 1589 1 1667 19 1705 20 44 78 100 125 121 25 11 182 13 816 13 738 1 787 -1 825 -18z m-432 -3576 c20 -42 37 -78 37 -80 0 -3 -157 -5 -350 -5 -192 0 -350 2 -350 5 0 2 17 38 37 80 l37 75 276 0 276 0 37 -75z">
+                                </path>
+                                <path id="pxXeKZWkb"
+                                    d="M637 3391 c-93 -99 -196 -279 -247 -431 -73 -215 -82 -486 -24 -717 45 -181 155 -390 272 -516 61 -64 115 -63 142 2 14 35 11 42 -81 162 -105 138 -172 290 -205 466 -22 121 -15 365 14 475 46 170 114 306 221 438 33 41 61 85 61 96 0 37 -37 74 -74 74 -27 0 -42 -10 -79 -49z">
+                                </path>
+                                <path id="p9ysbfrHT"
+                                    d="M4351 3414 c-12 -15 -21 -36 -21 -48 0 -11 28 -55 61 -96 107 -132 175 -269 221 -438 26 -99 36 -339 18 -450 -27 -173 -103 -352 -204 -485 -98 -128 -100 -133 -86 -168 14 -34 37 -49 74 -49 52 0 201 203 277 379 72 168 100 310 100 506 0 307 -113 610 -305 823 -40 43 -54 52 -81 52 -24 0 -39 -7 -54 -26z">
+                                </path>
+                                <path id="pIw8rb4bv"
+                                    d="M994 3068 c-70 -75 -136 -202 -165 -319 -37 -147 -23 -351 33 -482 56 -133 142 -247 185 -247 36 0 59 15 72 49 14 32 7 53 -35 104 -34 40 -91 163 -109 232 -8 32 -15 102 -15 155 0 149 37 262 125 386 50 70 54 90 24 128 -30 38 -76 36 -115 -6z">
+                                </path>
+                                <path id="pLiDNpJ8L"
+                                    d="M4011 3074 c-30 -38 -26 -58 24 -128 88 -124 125 -237 125 -386 0 -53 -7 -123 -15 -155 -18 -69 -75 -192 -109 -232 -42 -51 -49 -72 -35 -104 25 -61 81 -66 132 -10 111 123 178 312 178 501 0 189 -67 378 -178 501 -44 49 -90 54 -122 13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-name-phone">
+                        <p>MT.Truong</p>
+                        <span>0868842572</span>
+                    </div>
+                </div>
+                <div class="nina-phone_item">
+                    <div class="icon-phone">
+                        <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: matrix(1.3, 0, 0, 1.3, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out;"
+                            width="512" height="512" viewBox="0 0 5120 5120">
+                            <!-- Các phần tử khác -->
+                            <g id="l18WaNzASAFTe8JlrGqbsEJ" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l3twHw1QEH7RJNJgf5c4Z88" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l59gmrALw3aWqrbfxRFdwLm" fill="#FFFFFF" style="transform: none;">
+                                <path id="pfdfWWiDF"
+                                    d="M1787 4550 c-173 -22 -315 -168 -338 -348 -11 -87 -11 -3197 0 -3284 24 -182 161 -322 342 -348 84 -12 1454 -12 1538 0 181 26 318 166 342 348 11 87 11 3197 0 3284 -24 185 -164 325 -347 349 -82 10 -1454 10 -1537 -1z m1598 -169 c46 -20 101 -79 121 -127 12 -28 14 -308 14 -1694 0 -1821 5 -1690 -61 -1765 -51 -57 -97 -75 -204 -75 l-91 0 -69 141 c-39 77 -78 148 -89 157 -16 15 -54 17 -366 17 -312 0 -350 -2 -366 -17 -11 -9 -50 -80 -89 -157 l-69 -141 -169 0 c-120 0 -177 4 -201 14 -48 20 -107 75 -127 121 -18 38 -19 116 -19 1705 0 1589 1 1667 19 1705 20 44 78 100 125 121 25 11 182 13 816 13 738 1 787 -1 825 -18z m-432 -3576 c20 -42 37 -78 37 -80 0 -3 -157 -5 -350 -5 -192 0 -350 2 -350 5 0 2 17 38 37 80 l37 75 276 0 276 0 37 -75z">
+                                </path>
+                                <path id="pxXeKZWkb"
+                                    d="M637 3391 c-93 -99 -196 -279 -247 -431 -73 -215 -82 -486 -24 -717 45 -181 155 -390 272 -516 61 -64 115 -63 142 2 14 35 11 42 -81 162 -105 138 -172 290 -205 466 -22 121 -15 365 14 475 46 170 114 306 221 438 33 41 61 85 61 96 0 37 -37 74 -74 74 -27 0 -42 -10 -79 -49z">
+                                </path>
+                                <path id="p9ysbfrHT"
+                                    d="M4351 3414 c-12 -15 -21 -36 -21 -48 0 -11 28 -55 61 -96 107 -132 175 -269 221 -438 26 -99 36 -339 18 -450 -27 -173 -103 -352 -204 -485 -98 -128 -100 -133 -86 -168 14 -34 37 -49 74 -49 52 0 201 203 277 379 72 168 100 310 100 506 0 307 -113 610 -305 823 -40 43 -54 52 -81 52 -24 0 -39 -7 -54 -26z">
+                                </path>
+                                <path id="pIw8rb4bv"
+                                    d="M994 3068 c-70 -75 -136 -202 -165 -319 -37 -147 -23 -351 33 -482 56 -133 142 -247 185 -247 36 0 59 15 72 49 14 32 7 53 -35 104 -34 40 -91 163 -109 232 -8 32 -15 102 -15 155 0 149 37 262 125 386 50 70 54 90 24 128 -30 38 -76 36 -115 -6z">
+                                </path>
+                                <path id="pLiDNpJ8L"
+                                    d="M4011 3074 c-30 -38 -26 -58 24 -128 88 -124 125 -237 125 -386 0 -53 -7 -123 -15 -155 -18 -69 -75 -192 -109 -232 -42 -51 -49 -72 -35 -104 25 -61 81 -66 132 -10 111 123 178 312 178 501 0 189 -67 378 -178 501 -44 49 -90 54 -122 13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-name-phone">
+                        <p>MT.Truong</p>
+                        <span>0868842572</span>
+                    </div>
+                </div>
+                <div class="nina-phone_item">
+                    <div class="icon-phone">
+                        <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: matrix(1.3, 0, 0, 1.3, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out;"
+                            width="512" height="512" viewBox="0 0 5120 5120">
+                            <!-- Các phần tử khác -->
+                            <g id="l18WaNzASAFTe8JlrGqbsEJ" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l3twHw1QEH7RJNJgf5c4Z88" fill="#FFFFFF" style="transform: none;">
+                                <g style="transform: none;"></g>
+                            </g>
+                            <g id="l59gmrALw3aWqrbfxRFdwLm" fill="#FFFFFF" style="transform: none;">
+                                <path id="pfdfWWiDF"
+                                    d="M1787 4550 c-173 -22 -315 -168 -338 -348 -11 -87 -11 -3197 0 -3284 24 -182 161 -322 342 -348 84 -12 1454 -12 1538 0 181 26 318 166 342 348 11 87 11 3197 0 3284 -24 185 -164 325 -347 349 -82 10 -1454 10 -1537 -1z m1598 -169 c46 -20 101 -79 121 -127 12 -28 14 -308 14 -1694 0 -1821 5 -1690 -61 -1765 -51 -57 -97 -75 -204 -75 l-91 0 -69 141 c-39 77 -78 148 -89 157 -16 15 -54 17 -366 17 -312 0 -350 -2 -366 -17 -11 -9 -50 -80 -89 -157 l-69 -141 -169 0 c-120 0 -177 4 -201 14 -48 20 -107 75 -127 121 -18 38 -19 116 -19 1705 0 1589 1 1667 19 1705 20 44 78 100 125 121 25 11 182 13 816 13 738 1 787 -1 825 -18z m-432 -3576 c20 -42 37 -78 37 -80 0 -3 -157 -5 -350 -5 -192 0 -350 2 -350 5 0 2 17 38 37 80 l37 75 276 0 276 0 37 -75z">
+                                </path>
+                                <path id="pxXeKZWkb"
+                                    d="M637 3391 c-93 -99 -196 -279 -247 -431 -73 -215 -82 -486 -24 -717 45 -181 155 -390 272 -516 61 -64 115 -63 142 2 14 35 11 42 -81 162 -105 138 -172 290 -205 466 -22 121 -15 365 14 475 46 170 114 306 221 438 33 41 61 85 61 96 0 37 -37 74 -74 74 -27 0 -42 -10 -79 -49z">
+                                </path>
+                                <path id="p9ysbfrHT"
+                                    d="M4351 3414 c-12 -15 -21 -36 -21 -48 0 -11 28 -55 61 -96 107 -132 175 -269 221 -438 26 -99 36 -339 18 -450 -27 -173 -103 -352 -204 -485 -98 -128 -100 -133 -86 -168 14 -34 37 -49 74 -49 52 0 201 203 277 379 72 168 100 310 100 506 0 307 -113 610 -305 823 -40 43 -54 52 -81 52 -24 0 -39 -7 -54 -26z">
+                                </path>
+                                <path id="pIw8rb4bv"
+                                    d="M994 3068 c-70 -75 -136 -202 -165 -319 -37 -147 -23 -351 33 -482 56 -133 142 -247 185 -247 36 0 59 15 72 49 14 32 7 53 -35 104 -34 40 -91 163 -109 232 -8 32 -15 102 -15 155 0 149 37 262 125 386 50 70 54 90 24 128 -30 38 -76 36 -115 -6z">
+                                </path>
+                                <path id="pLiDNpJ8L"
+                                    d="M4011 3074 c-30 -38 -26 -58 24 -128 88 -124 125 -237 125 -386 0 -53 -7 -123 -15 -155 -18 -69 -75 -192 -109 -232 -42 -51 -49 -72 -35 -104 25 -61 81 -66 132 -10 111 123 178 312 178 501 0 189 -67 378 -178 501 -44 49 -90 54 -122 13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-name-phone">
+                        <p>MT.Truong</p>
+                        <span>0868842572</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End section phone -->
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.toggleList').forEach(function (toggle) {
+                toggle.addEventListener("click", function () {
+                    console.log("H4 được click!"); // Kiểm tra xem sự kiện có được gọi không
+                    var list = this.nextElementSibling; // Lấy <ul> ngay sau <h4>
+                    list.classList.toggle("show"); // Thêm/xóa class 'show' để mở/thu gọn
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

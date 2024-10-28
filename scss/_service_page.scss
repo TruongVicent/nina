@@ -1,0 +1,190 @@
+.nina-service-page {
+   
+    z-index: 99;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-color: white;
+    overflow: hidden;
+
+    .nina-container-service {
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/service-page.png);
+        object-position:  -20% -25%;
+        background-size: 150%;
+        .nina-service-box {
+            display: flex;
+            height: 100%;
+
+            //nina-service-box_float
+            .nina-service-box_float {
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .nina-service-box_float_images {
+                    width: 85%;
+                    height: 85%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .nina-service-box_float_images__bg{
+                        position: absolute;
+                        width: 90%;
+                        height: 90%;
+                        background-image: url("https://nina.vn/assets/images/services/cercle-shape.png");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        z-index: 1;
+                        animation: rotage-bg 20s linear infinite;
+                    }
+                    .nina-service-box_float_images__child{
+                        width: 45%;
+                        z-index: 2;
+                    }
+                  
+                }
+
+                @keyframes rotage-bg{
+                    from{
+                        transform: rotate(0deg);
+                    }
+                    to{
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+
+            //nina-service-box_right
+            .nina-service-box_right {
+                padding: 20px;
+                flex: 1;
+
+                .nina-service-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    height: 100%;
+
+                    .nina-service-item {
+                        width: 50%;
+                        padding: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .nina-service-wrap {
+                            background-color: aquamarine;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+
+                            .nina-service-icon {
+                                display: flex;
+                                justify-content: center;
+                                position: absolute;
+                                top: -1%;
+                                z-index: 10;
+
+                                .icon-box {
+                                    position: relative;
+                                    width: 100px;
+                                    height: 100px;
+                                    clip-path: circle(40% at 50% 50%);
+                                    background-color: #fff7f7;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    z-index: 10;
+
+                                    // box icon img
+                                    .nina-service-icon {
+                                        width: 80%;
+                                        height: 80%;
+                                        display: flex;
+                                        align-items: center;
+
+                                        img {
+                                            width: auto;
+                                            height: 65%;
+                                            object-fit: cover;
+                                            padding-top: 10px;
+                                        }
+                                    }
+
+                                    // box dot
+                                }
+                                .dot {
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    width: 10px;
+                                    height: 10px;
+                                    background-color: transparent;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%) rotate(0deg) translateX(40px);
+                                    animation: orbit 4s linear infinite;
+                                    opacity: 0;
+                                    transition: opacity 0.3s ease;
+                                }
+                                .dot1 {
+                                    background-color: rgb(153, 227, 255);
+                                }
+                                .dot2 {
+                                    background-color: rgb(254, 76, 28);
+                                    animation-delay: -2s;
+                                }
+
+                                @keyframes orbit {
+                                    0% {
+                                        transform: translate(-50%, -50%) rotate(0deg) translateX(40px);
+                                    }
+                                    100% {
+                                        transform: translate(-50%, -50%) rotate(360deg) translateX(40px);
+                                    }
+                                }
+                            }
+
+                            .nina-service-text {
+                                width: 90%;
+                                height: 65%;
+                                padding-top: 15%;
+                                position: relative;
+                                &:hover {
+                                    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+                                }
+                                .box-text {
+                                    text-align: center;
+                                    width: 100%;
+                                    h3 {
+                                        font-size: 16px;
+                                        margin-bottom: 10px;
+                                        font-size: 1.15rem;
+                                    }
+
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+
+                            // Hiển thị các chấm khi hover vào .nina-service-wrap
+                            &:hover .dot {
+                                display: flex;
+                                z-index: 11;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,279 @@
+.nina-process-page {
+    margin: 50px 0;
+    width: 100%;
+    height: 120vh;
+    background-image: linear-gradient(#fefdfd, #fcf4f5);
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+    // box icon image
+    .icon1{
+        float: right;
+        margin-top: -20px;
+        margin-right: 200px;
+    }
+    .icon2{
+        margin: 0; /* Loại bỏ khoảng trống */
+        padding: 0; /* Loại bỏ khoảng trống */
+        margin-left: 250px;
+        margin-bottom: -40px;
+    }
+    .icon3{
+        float: left;
+        margin-left: 20%;
+    }
+    .icon4 {
+        float: right;
+        margin-top: 300px;
+        margin-right: -500px;
+    }
+    .icon5{
+        margin-top: 50px;
+        margin-left: 50%;
+    }
+    .icon6{
+        float: right;
+        margin-top: -30px;
+        margin-right: 150px;
+    }
+    .box-icon-image1{
+        animation: rotatemeOne 12s infinite linear;
+    }
+    .box-icon-image2{
+        animation: rotateme 12s infinite linear;
+    }
+    .box-icon-image3{
+        animation: jump 3s infinite linear;
+    }
+    @keyframes rotatemeOne{
+        0%{
+            transform: rotate(0.0deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
+    }
+    @keyframes rotateme{
+        0%{
+            transform: rotate(0.0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes jump{
+        0%{
+            transform: translate3d(0, 0 , 0);
+        }
+        40%{
+            transform: translate3d(0, 20px , 0);
+        }
+        100%{
+            transform: translate3d(0, 0 , 0);
+            
+        }
+    }
+
+    .nina-container {
+        width: 100%;
+
+        .nina-process-page_header {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            h2 {
+                font-size: 30px;
+                font-weight: 700;
+                color: $color-form-domain;
+            }
+            .animate-border {
+                position: relative;
+                width: 115px;
+                background-color: $color-form-domain;
+                height: 3px;
+                overflow: hidden;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 35px;
+                    height: 3px;
+                    left: 15px;
+                    bottom: 0;
+                    border-left: 10px solid #fff;
+                    border-right: 10px solid #fff;
+                    animation: animborder 2s linear infinite;
+                }
+            }
+
+            @keyframes animborder {
+                0% {
+                    transform: translate(0);
+                }
+                100% {
+                    transform: translate(113px);
+                }
+            }
+        }
+
+        .nina-process-page_body {
+            width: 100%;
+            position: relative;
+            margin: 5% 0;
+            svg {
+                width: 100%;
+                margin-top: 5%;
+
+                .stroke-2 {
+                    stroke-width: 2;
+                }
+
+                .fill-none {
+                    fill: none;
+                }
+
+                .stroke-\[\#919191\] {
+                    stroke: #919191;
+                }
+
+                .animate-stroke {
+                    animation: stroke 10s linear infinite;
+                }
+            }
+
+            @keyframes stroke {
+                0% {
+                    stroke-dasharray: 15.0406, 15.0406;
+                    stroke-dashoffset: 600;
+                }
+
+                100% {
+                    stroke-dasharray: 15.0406, 15.0406;
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            .nina-process-page_box {
+                position: absolute;
+                width: 100%;
+                height: 40vh;
+                top: 0;
+                left: 0;
+                background-color: transparent;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 20px;
+                .nina-process-item-cycle {
+                    width: 200px;
+                    height: 200px;
+                    background-color: #ffffff;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    border-radius: 50%;
+                    padding: 30px 30px;
+                    box-sizing: border-box;
+                    position: relative;
+                    transform: perspective(1px) translateZ(0);
+                    transition: 0.4s;
+                   
+                    .count {
+                        position: absolute;
+                        float: right;
+                        right: 5px;
+                        top: -50px;
+                        font-size: 50px;
+                        font-weight: 700;
+                        color: $color-form-domain;
+                        display: inline-block;
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+
+                      
+                    }
+
+                    .item-cycle_img{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;  
+                        align-items: center;      
+                        text-align: center;
+                        z-index: 11;
+                        img {
+                            width: 70px;
+                            height: 70px;
+                        }
+                        h3{
+                            margin-top: 10px;
+                            width: 60%;
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
+
+                       
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        bottom: 0;
+                        background-image: linear-gradient(90deg,#F92C08 0, #CF1724 100%);
+                        transition: 0.4s;
+                        clip-path: circle(0% at 10% 79%);
+                        border-radius: 50%;
+                        display: flex;
+                        z-index: -1;
+                    }
+                  
+
+                    &:hover::before{
+                        clip-path: circle(118.8% at 10% 79%);
+                        border-radius: 50%;
+                        display: flex;
+                        z-index: -1;
+                    }
+
+                    &:hover .count{
+                        animation: shake 0.5s ease-in-out both;
+
+                    }
+
+                    @keyframes shake{
+                        0%, 100% {
+                            transform: rotate(0deg);
+                        }
+                        20%, 60%{
+                            transform: rotate(-20deg);
+                        }
+                        40%, 80% {
+                            transform: rotate(20deg);
+                        }
+                    }
+                }
+
+                // box item cycle
+                .item-cycle1 {
+                    margin-top: 70px;
+                }
+                .item-cycle3 {
+                    margin-top: 90px;
+                }
+                .item-cycle4 {
+                    margin-top: 140px;
+                }
+                .item-cycle5 {
+                    margin-top: 100px;
+                }
+            }
+        }
+    }
+
+    
+}

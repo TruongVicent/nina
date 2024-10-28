@@ -1,0 +1,445 @@
+.nina-domain-page {
+    width: 100%;
+    height: 180vh;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    .nina-domain-page_box-image {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+
+        .image-pattern_left,
+        .image-pattern_right {
+            margin-top: -13%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .image-pattern_right {
+            padding-top: 20%;
+        }
+    }
+
+    .nina-domain-page_box-container {
+        width: 100%;
+        height: 85%;
+        z-index: 11;
+        // display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+        padding: 0 1%;
+
+
+        .animate-border {
+            position: relative;
+            width: 115px;
+            background-color: $color-form-domain;
+            height: 3px;
+            overflow: hidden;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 35px;
+                height: 3px;
+                left: 15px;
+                bottom: 0;
+                border-left: 10px solid #fff;
+                border-right: 10px solid #fff;
+                animation: animborder 2s linear infinite;
+            }
+        }
+
+        @keyframes animborder {
+            0% {
+                transform: translate(0);
+            }
+            100% {
+                transform: translate(113px);
+            }
+        }
+
+        .nina-domain-page_box-container__box1 {
+            font-size: 14px;
+            padding: 8% 0;
+            // width: 100%;
+            height: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: -3%;
+
+            h3 {
+                color: $color-form-domain;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            p {
+                padding-top: 10px;
+            }
+
+            .nina-domain-page_box__column-domain {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 5px;
+                
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 15px;
+                    margin: 10px;
+                    width: 95%;
+                    height: 7vh;
+                    border-radius: 50px;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+                    background-color: white;
+                    transform: perspective(1px) translateZ(0);
+                    transition: 0.4s;
+                    position: relative;
+                    z-index: 3;
+                    span {
+                        color: $color-form-domain;
+                        font-weight: 700;
+                        transition: transform 0.4s ease;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: -1;
+                        background: #F9E7E9;
+                        border-radius: 50px;
+                        clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+                        opacity: 1;
+                        transition: 0.4s;
+                    }
+                    &:hover::before {
+                        clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+                    }
+
+                    .item_icon-shopping-cart-domain{
+                        position: absolute;
+                        width: 2rem;
+                        height: 2rem;
+                        right: 10px;
+                        border-radius: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        background-color: $color-form-domain;
+                        right: 10px;
+                        opacity: 0;
+                        transform: translateX(20px);
+                        transition: transform 0.4s ease , opacity 0.4s ease;
+                        
+                       
+                    }
+                    &:hover .item_icon-shopping-cart-domain {
+                        opacity: 1;
+                        transform: translateX(-10px); 
+                        z-index: 2;
+                        transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
+                    }
+                    &:hover span {
+                        transform: translateX(-45px);
+                    }
+                    
+                    
+                   
+                }
+            }
+
+            .nina-readmore {
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: perspective(1px) translateZ(0);
+                transition: opacity 0.4s ease;
+                position: relative;
+
+                .nina-readmore_btn {
+                    width: 30%;
+                    height: 7vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50px;
+                    background-color: $color-form-domain;
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 400;
+                    position: relative;
+                    font-size: 16px;
+                    transition: width 0.4s ease;
+
+                    
+                    .nina-readmore_btn__text {
+                        align-items: center;
+                        justify-content: center;
+                        transition: transform 0.4 ease;
+                        
+                    }
+
+                    .icon-arrow-right {
+                        display: block;
+                        width: 2rem;
+                        height: 2rem;
+                        margin-left: 5px;
+                        padding: 0 10px;
+                        border-radius: 50%;
+                        background-color: #FF585D;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        right: 30px;
+                        opacity: 0;
+                        transform: translateX(10px);
+                        transition: transform 0.4s ease , opacity 0.4s ease;
+                    }
+                   
+                    &:hover{
+                        width: 35%;
+                        display: flex;
+                        justify-content: center;
+                        .nina-readmore_btn__text{
+                            padding-left: -10px;
+                        }
+                    }
+    
+                    &:hover .icon-arrow-right {
+                        padding-left: 10px;
+                        opacity: 1;
+                        transform: translateX(20px); 
+                        z-index: 2;
+                        transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+                    }
+                    &:hover .nina-readmore_btn__text{
+                        transform: translateX(-10px);
+                    }
+                }
+               
+            }
+        }
+
+        .nina-domain-page_box-container__box2 {
+            // width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            
+        }
+
+        .nina-domain-page_box-container__box3 {
+            // width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2% 1%;
+            box-sizing: border-box;
+            margin-top: -2%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            
+        }
+
+        .nina-domain-page_box-container__box4 {
+            font-size: 14px;
+            padding: 8% 0;
+            // width: 100%;
+            height: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: -8%;
+
+            h3 {
+                color: $color-form-domain;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            p {
+                padding-top: 10px;
+            }
+
+            .nina-domain-page_box__column-domain {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 5px;
+                
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 15px;
+                    margin: 10px;
+                    width: 95%;
+                    height: 7vh;
+                    border-radius: 50px;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+                    background-color: white;
+                    transform: perspective(1px) translateZ(0);
+                    transition: 0.4s;
+                    position: relative;
+                    z-index: 3;
+                    span {
+                        color: $color-form-domain;
+                        font-weight: 700;
+                        transition: transform 0.4s ease;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: -1;
+                        background: #F9E7E9;
+                        border-radius: 50px;
+                        clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+                        opacity: 1;
+                        transition: 0.4s;
+                    }
+                    &:hover::before {
+                        clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+                    }
+
+                    .item_icon-shopping-cart-domain{
+                        position: absolute;
+                        width: 2rem;
+                        height: 2rem;
+                        right: 10px;
+                        border-radius: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        background-color: $color-form-domain;
+                        right: 10px;
+                        opacity: 0;
+                        transform: translateX(20px);
+                        transition: transform 0.4s ease , opacity 0.4s ease;
+                        
+                       
+                    }
+                    &:hover .item_icon-shopping-cart-domain {
+                        opacity: 1;
+                        transform: translateX(-10px); 
+                        z-index: 2;
+                        transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
+                    }
+                    &:hover span {
+                        transform: translateX(-45px);
+                    }
+                    
+                    
+                   
+                }
+            }
+
+            .nina-readmore {
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: perspective(1px) translateZ(0);
+                transition: opacity 0.4s ease;
+                position: relative;
+
+                .nina-readmore_btn {
+                    width: 30%;
+                    height: 7vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50px;
+                    background-color: $color-form-domain;
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 400;
+                    position: relative;
+                    font-size: 16px;
+                    transition: width 0.4s ease;
+
+                    
+                    .nina-readmore_btn__text {
+                        align-items: center;
+                        justify-content: center;
+                        transition: transform 0.4 ease;
+                        
+                    }
+
+                    .icon-arrow-right {
+                        display: block;
+                        width: 2rem;
+                        height: 2rem;
+                        margin-left: 5px;
+                        padding: 0 10px;
+                        border-radius: 50%;
+                        background-color: #FF585D;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        right: 30px;
+                        opacity: 0;
+                        transform: translateX(10px);
+                        transition: transform 0.4s ease , opacity 0.4s ease;
+                    }
+                   
+                    &:hover{
+                        width: 35%;
+                        display: flex;
+                        justify-content: center;
+                        .nina-readmore_btn__text{
+                            padding-left: -10px;
+                        }
+                    }
+    
+                    &:hover .icon-arrow-right {
+                        padding-left: 10px;
+                        opacity: 1;
+                        transform: translateX(20px); 
+                        z-index: 2;
+                        transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+                    }
+                    &:hover .nina-readmore_btn__text{
+                        transform: translateX(-10px);
+                    }
+                }
+               
+            }
+        }
+        
+    }
+}

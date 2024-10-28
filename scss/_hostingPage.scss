@@ -1,0 +1,422 @@
+.nina-hosting-page {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 130vh;
+    background-image: linear-gradient(#FBF3F4 ,#fff);
+    padding: 2% 1%;
+
+    .nina-hosting-page_container {
+        width: 100%;
+        height: 100%;
+
+        .nina-hosting-page_container__title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+
+            .text-h3-hosting {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+                font-weight: 700;
+                color: $color-form-domain;
+            }
+            .animate-border {
+                position: relative;
+                width: 115px;
+                background-color: $color-form-domain;
+                height: 3px;
+                overflow: hidden;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 35px;
+                    height: 3px;
+                    left: 15px;
+                    bottom: 0;
+                    border-left: 10px solid #fff;
+                    border-right: 10px solid #fff;
+                    animation: animborder 2s linear infinite;
+                }
+            }
+
+            @keyframes animborder {
+                0% {
+                    transform: translate(0);
+                }
+                100% {
+                    transform: translate(113px);
+                }
+            }
+        }
+
+        .nina-hosting-page_container__tabs {
+            width: 100%;
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .nina-hosting-nav-tabs {
+                width: 500px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                border-radius: 50px;
+
+                .tabs1 {
+                    background-color: $color-form-domain;
+                    border-radius: 50px;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .tabs {
+                    padding: 0 20px;
+                    height: 2.1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        background-color: $color-form-domain;
+                        border-radius: 50px;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .nina-hosting-page_container__table {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 80vh;
+            justify-content: center;
+            margin: 80px 0;
+           
+
+            //swiper slide
+            .swiper {
+                position: relative;
+                width: 100%;
+                height: 95vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .swiper-wrapper {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    height: 120%;
+
+                    .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        background-color: white;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+                        transform: scale(0.8);
+
+                        .money-domain {
+                            font-weight: bold;
+                        }
+
+                        .gift-icon {
+                            background-color: $color-form-domain;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-left: 10px;
+                            i {
+                                color: white;
+                            }
+                        }
+
+                        .nina-item-hosting {
+                            width: 100%;
+                            height: 100%;
+                            padding: 0;
+                            margin: 0;
+                            
+                            .nina-item-hosting_header {
+                                width: 100%;
+                                height: 30%;
+                                
+                                display: flex;
+                                justify-content: center;
+                                
+
+                                .nina-item-hosting_header__title {
+                                    font-size: 16px;
+                                    color: white;
+                                    font-weight: 700;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    padding: 20px;
+
+                                    h2 {
+                                        font-size: 1.5rem;
+                                    }
+                                    .nina-desc {
+                                        width: 4rem;
+                                        height: 5px;
+                                        background-color: white;
+                                    }
+                                }
+
+                                .nina-item-hosting_header__price {
+                                    width: 200px;
+                                    height: 200px;
+                                    position: absolute;
+                                    background-color: white;
+                                    top: 12%;
+                                    border-radius: 50%;
+                                    border: 15px solid #437ccf;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    .price1,
+                                    .price3 {
+                                        font-size: 20px;
+                                    }
+                                    .price2 {
+                                        font-size: 30px;
+                                        font-weight: bold;
+                                        color: $color-form-domain;
+                                    }
+                                }
+
+
+
+                            }
+                            // 8 box color
+                            .item-hosting_header1{
+                                background-color: rgb(82, 145, 236);
+                                border-bottom: 15px solid #437ccf;
+
+                                .nina-item-hosting_header__price {
+                                    border: 15px solid #437ccf;
+                                }
+                            }
+                            .item-hosting_header2{
+                                background-color: #FFC600;
+                                border-bottom: 15px solid #E6B302;
+
+                                .nina-item-hosting_header__price {
+                                    border: 15px solid #E6B302;
+                                }
+                            }
+                            .item-hosting_header3{
+                                background-color: #C30E13;
+                                border-bottom: 15px solid #AC090E;
+
+                                .nina-item-hosting_header__price {
+                                    border: 15px solid #AC090E;
+                                }
+                            }
+                            .item-hosting_header4{
+                                background-color: #3FB130;
+                                border-bottom: 15px solid #319B23;
+
+                                .nina-item-hosting_header__price {
+                                    border: 15px solid #319B23;
+                                }
+                            }
+
+                            .item-hosting_header5{
+                                background-color: #9B59B6;
+                                border-bottom: 15px solid #7C4791;
+
+                                .nina-item-hosting_header__price {
+                                    border: 15px solid #7C4791;
+                                }
+                            }
+                            .item-hosting_header6{
+                                background-color: #0069D1;
+                                border-bottom: 15px solid #004B97;
+
+                                .nina-item-hosting_header__price {
+                                    border: 15px solid #004B97;
+                                }
+                            }
+                            
+
+
+                            .nina-item-hosting_body {
+                                width: 100%;
+                                min-height: 50%;
+                                margin: 0;
+                                padding: 0;
+                                display: flex;
+                                align-items: center;
+
+                                ul {
+                                    width: 100%;
+                                    margin: 0;
+                                    padding: 0;
+                                    box-sizing: border-box;
+                                    padding-top: 15%;
+                                    font-size: 18px;
+                                }
+
+                                ul>li{
+                                    width: 100%;
+                                    height: 8vh;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    border-bottom: 1px solid rgb(245 245 245);
+                                    padding: 0 15px;
+
+
+                                    .text-hosting_left {
+
+                                        .text-hosting {
+                                           float: left;
+                                        }
+
+                                        .text-hosting-vat {
+                                            font-size: 15px;
+                                            font-style: italic;
+                                        }
+                                    }
+
+                                    .text-hosting_right {
+
+                                        .money-hosting {
+                                            font-size: 18px;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+
+                                
+                            }
+
+                            .nina-readmore {
+                                width: 100%;
+                                height: 10vh;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transform: perspective(1px) translateZ(0);
+                                transition: opacity 0.4s ease;
+                                position: relative;
+                                margin: 10px;
+                                
+                
+                                .nina-readmore_btn {
+                                    width: 40%;
+                                    height: 8vh;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50px;
+                                    background-color: $color-form-domain;
+                                    text-decoration: none;
+                                    color: white;
+                                    font-weight: 400;
+                                    position: relative;
+                                    font-size: 18px;
+                                    transition: width 0.4s ease;
+                
+                                    
+                                    .nina-readmore_btn__text {
+                                        align-items: center;
+                                        justify-content: center;
+                                        transition: transform 0.4 ease;
+                                        
+                                    }
+                
+                                    .icon-arrow-right {
+                                        display: block;
+                                        width: 2rem;
+                                        height: 2rem;
+                                        margin-left: 5px;
+                                        padding: 0 10px;
+                                        border-radius: 50%;
+                                        background-color: #FF585D;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        position: absolute;
+                                        right: 30px;
+                                        opacity: 0;
+                                        transform: translateX(10px);
+                                        transition: transform 0.4s ease , opacity 0.4s ease;
+                                    }
+                                   
+                                    &:hover{
+                                        width: 45%;
+                                        display: flex;
+                                        justify-content: center;
+                                        .nina-readmore_btn__text{
+                                            padding-left: -10px;
+                                        }
+                                    }
+                    
+                                    &:hover .icon-arrow-right {
+                                        padding-left: 10px;
+                                        opacity: 1;
+                                        transform: translateX(20px); 
+                                        z-index: 2;
+                                        transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+                                    }
+                                    &:hover .nina-readmore_btn__text{
+                                        transform: translateX(-10px);
+                                    }
+                                }
+                               
+                            }
+                        }
+                    }
+                }
+
+                .swiper-prev,
+                .swiper-next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    z-index: 10;
+
+                    i {
+                        font-size: 16px;
+                        color: $color-form-domain;
+                        font-weight: 900;
+                    }
+                }
+
+                .swiper-prev {
+                    left: -10px;
+                    padding-right: 10px;
+                }
+                .swiper-next {
+                    right: -10px;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,199 @@
+// Variable
+$color-form-domain: rgb(197 18 42);
+
+.nina-container-banner {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    .box-banner {
+        position: absolute;
+        display: flex;
+        height: 890px;
+        width: 690px;
+        top: 1%;
+        right: -9%;
+        margin-bottom: 0;
+        background-color: rgb(197 18 42/ 0.2 );
+        border-radius: 9900px;
+        z-index: 5;
+        transform: translate(0) rotate(57deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+    }
+}
+.banner {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    background-color: #fdf6f7;
+    display: flex;
+    align-items: center;
+
+    // Form search domain
+    .nina-box-domain {
+        text-align: center;
+        top: 30%;
+        padding-left: 0;
+
+        // nina-input-search
+        .form-register-domain {
+            .h3-domain {
+                text-transform: uppercase;
+                color: $color-form-domain;
+                font-weight: 700;
+            }
+
+            //nina-input-search
+            .nina-input-search {
+                width: 100%;
+                height: 8vh;
+                display: flex;
+                border-radius: 50px;
+                .input-search-domain {
+                    width: 85%;
+                    height: 100%;
+                    border: 1px solid transparent;
+                    border-color: $color-form-domain;
+                    border-radius: 25px 0% 0% 25px;
+                    border-right: 0;
+                    padding-left: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                }
+                .input-search-domain:focus {
+                    border: 1px solid transparent;
+                    border-color: $color-form-domain;
+                    outline: none; /* Xóa viền outline khi chọn */
+                }
+                .search-domain {
+                    border: 1px solid $color-form-domain;
+                    border-radius: 0 25px 25px 0;
+                    border-right: 0;
+                    width: 15%;
+                    height: 100%;
+                    color: white;
+                    background-color: $color-form-domain;
+                }
+            }
+
+            //nina-swiper-slide-domain
+            .nina-swiper-slide-domain {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 8vh;
+                justify-content: center;
+
+                //swiper slide
+                .swiper {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    .swiper-wrapper {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+                        padding: 5px;
+                        
+
+                        .swiper-slide {
+                            padding: 10px 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                            border-radius: 50px;
+                            background-color: white;
+                            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                            transform: scale(0.8);
+                           
+                            .money-domain {
+                                font-weight: bold;
+                            }
+
+                            .gift-icon{
+                                background-color: $color-form-domain;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-left: 10px;
+                                i{
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    .swiper-prev, .swiper-next {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        z-index: 10;
+                        
+                        i {
+                            font-size: 16px;
+                            color: $color-form-domain;
+                            font-weight: 900;
+                        }
+                    }
+
+                    .swiper-prev {
+                        left: -10px;
+                        padding-right: 10px;
+                       
+                    }
+                    .swiper-next {
+                        right: -10px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nina-overlay {
+    position: absolute;
+    right: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .nina-img-ani {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        z-index: 10;
+
+        .img {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            display: block;
+            z-index: 11;
+            filter: brightness(1.1);
+        }
+    }
+}

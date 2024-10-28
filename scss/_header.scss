@@ -1,0 +1,185 @@
+.nina-container-top {
+    align-items: center;
+    height: 35px;
+    .item-menu {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-right {
+        .ul-menu,
+        .item-menu {
+            padding: 0px 10px;
+            i {
+                padding: 0px 2px;
+            }
+        }
+        justify-content: end;
+        padding-right: 20px;
+
+        .ul-infos-menu {
+            display: none;
+            position: absolute; /* Đảm bảo nó xuất hiện bên dưới nút */
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .ul-menu:hover .ul-infos-menu {
+            z-index: 8;
+            display: block;
+            width: 300px;
+            li {
+                padding: 5px 10px;
+                a {
+                    padding: 10px 10px;
+                    color: black;
+                    text-decoration: none;
+                    transition:
+                        padding-left 0.3s ease,
+                        color 0.3s ease; // Thêm hiệu ứng cho padding và màu
+
+                    &:hover {
+                        color: rgb(197 18 42);
+                        padding-left: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .btn-lss {
+            background: rgb(1 88 170);
+            color: #ffffff;
+            padding: 0px 5px;
+            border-radius: 15px;
+        }
+    }
+    .col-6 a,
+    .ul-menu {
+        position: relative;
+    }
+}
+#nona-top-header{
+    transition: top 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+/* Đường gạch dọc giữa các mục */
+.col-6 a:not(:last-child)::after,
+.ul-menu:not(:last-child)::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    right: -5px;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background-color: #ccc;
+}
+@media (min-width: 992px) {
+    .d-md-block {
+        display: block;
+    }
+}
+
+// nina-container-menu
+#nina-nav-menu {
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    transition: top 0.3s ease;
+    .nina-container-menu {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .grid-cols-12 {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        width: 100%;
+    }
+    .nina-menu {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        li {
+            position: relative;
+            list-style: none;
+            a {
+                display: block;
+                text-decoration: none;
+                color: black;
+                padding: 0px 15px;
+                text-transform: uppercase;
+                .bi-chevron-down {
+                    font-size: 14px;
+                }
+            }
+            .menu-domain {
+                display: none;
+                position: absolute;
+                background-color: white;
+                padding: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                li > a {
+                    padding: 5px 0px;
+                }
+            }
+            &:hover .menu-domain {
+                display: block !important;
+                width: 300px;
+                z-index: 99;
+                
+                li {
+                    background: transparent;
+                    a {
+                        padding: 5px 10px;
+                        transition:
+                            padding-left 0.3s ease,
+                            color 0.3s ease;
+                            
+                        &:hover {
+                            color: rgb(197 18 42);
+                            padding-left: 1.5rem;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                background-color: #c5122a;
+                padding: 2px 0px;
+                color: white;
+                border-radius: 10px;
+                a{
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .to-gradient{
+            &:hover{
+                background: transparent;
+            }
+        }
+        .to-gradient-btn{
+            top: 0;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            height: 35px;
+            background-image: linear-gradient(to right,#fe2f05, #c5122a);
+            border-radius: 20px;
+            color: white;
+        }
+    }
+}

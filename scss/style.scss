@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+@import "header";
+@import "banner";
+@import "service_page";
+@import "domainPage";
+@import "hostingPage";
+@import "webDesign";
+@import "processPage";
+@import "benefitPage";
+@import "footer";
+@import "phone";
+@import "reponsive/media\(1024\)";
+

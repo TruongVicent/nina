@@ -1,0 +1,2303 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.nina-container-top {
+  align-items: center;
+  height: 35px;
+}
+.nina-container-top .item-menu {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.nina-container-top .menu-right {
+  justify-content: end;
+  padding-right: 20px;
+}
+.nina-container-top .menu-right .ul-menu,
+.nina-container-top .menu-right .item-menu {
+  padding: 0px 10px;
+}
+.nina-container-top .menu-right .ul-menu i,
+.nina-container-top .menu-right .item-menu i {
+  padding: 0px 2px;
+}
+.nina-container-top .menu-right .ul-infos-menu {
+  display: none;
+  position: absolute; /* Đảm bảo nó xuất hiện bên dưới nút */
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.nina-container-top .menu-right .ul-menu:hover .ul-infos-menu {
+  z-index: 8;
+  display: block;
+  width: 300px;
+}
+.nina-container-top .menu-right .ul-menu:hover .ul-infos-menu li {
+  padding: 5px 10px;
+}
+.nina-container-top .menu-right .ul-menu:hover .ul-infos-menu li a {
+  padding: 10px 10px;
+  color: black;
+  text-decoration: none;
+  transition: padding-left 0.3s ease, color 0.3s ease;
+}
+.nina-container-top .menu-right .ul-menu:hover .ul-infos-menu li a:hover {
+  color: rgb(197, 18, 42);
+  padding-left: 1.5rem;
+}
+.nina-container-top .menu-right .btn-lss {
+  background: rgb(1, 88, 170);
+  color: #ffffff;
+  padding: 0px 5px;
+  border-radius: 15px;
+}
+.nina-container-top .col-6 a,
+.nina-container-top .ul-menu {
+  position: relative;
+}
+
+#nona-top-header {
+  transition: top 0.3s ease;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/* Đường gạch dọc giữa các mục */
+.col-6 a:not(:last-child)::after,
+.ul-menu:not(:last-child)::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  right: -5px;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background-color: #ccc;
+}
+
+@media (min-width: 992px) {
+  .d-md-block {
+    display: block;
+  }
+}
+#nina-nav-menu {
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  transition: top 0.3s ease;
+}
+#nina-nav-menu .nina-container-menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#nina-nav-menu .grid-cols-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  width: 100%;
+}
+#nina-nav-menu .nina-menu {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+#nina-nav-menu .nina-menu li {
+  position: relative;
+  list-style: none;
+}
+#nina-nav-menu .nina-menu li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0px 15px;
+  text-transform: uppercase;
+}
+#nina-nav-menu .nina-menu li a .bi-chevron-down {
+  font-size: 14px;
+}
+#nina-nav-menu .nina-menu li .menu-domain {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#nina-nav-menu .nina-menu li .menu-domain li > a {
+  padding: 5px 0px;
+}
+#nina-nav-menu .nina-menu li:hover .menu-domain {
+  display: block !important;
+  width: 300px;
+  z-index: 99;
+}
+#nina-nav-menu .nina-menu li:hover .menu-domain li {
+  background: transparent;
+}
+#nina-nav-menu .nina-menu li:hover .menu-domain li a {
+  padding: 5px 10px;
+  transition: padding-left 0.3s ease, color 0.3s ease;
+}
+#nina-nav-menu .nina-menu li:hover .menu-domain li a:hover {
+  color: rgb(197, 18, 42);
+  padding-left: 1.5rem;
+}
+#nina-nav-menu .nina-menu li:hover {
+  background-color: #c5122a;
+  padding: 2px 0px;
+  color: white;
+  border-radius: 10px;
+}
+#nina-nav-menu .nina-menu li:hover a:hover {
+  color: white;
+}
+#nina-nav-menu .nina-menu .to-gradient:hover {
+  background: transparent;
+}
+#nina-nav-menu .nina-menu .to-gradient-btn {
+  top: 0;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  background-image: linear-gradient(to right, #fe2f05, #c5122a);
+  border-radius: 20px;
+  color: white;
+}
+
+.nina-container-banner {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+}
+.nina-container-banner .box-banner {
+  position: absolute;
+  display: flex;
+  height: 890px;
+  width: 690px;
+  top: 1%;
+  right: -9%;
+  margin-bottom: 0;
+  background-color: rgba(197, 18, 42, 0.2);
+  border-radius: 9900px;
+  z-index: 5;
+  transform: translate(0) rotate(57deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  background-color: #fdf6f7;
+  display: flex;
+  align-items: center;
+}
+.banner .nina-box-domain {
+  text-align: center;
+  top: 30%;
+  padding-left: 0;
+}
+.banner .nina-box-domain .form-register-domain .h3-domain {
+  text-transform: uppercase;
+  color: rgb(197, 18, 42);
+  font-weight: 700;
+}
+.banner .nina-box-domain .form-register-domain .nina-input-search {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  border-radius: 50px;
+}
+.banner .nina-box-domain .form-register-domain .nina-input-search .input-search-domain {
+  width: 85%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-color: rgb(197, 18, 42);
+  border-radius: 25px 0% 0% 25px;
+  border-right: 0;
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.banner .nina-box-domain .form-register-domain .nina-input-search .input-search-domain:focus {
+  border: 1px solid transparent;
+  border-color: rgb(197, 18, 42);
+  outline: none; /* Xóa viền outline khi chọn */
+}
+.banner .nina-box-domain .form-register-domain .nina-input-search .search-domain {
+  border: 1px solid rgb(197, 18, 42);
+  border-radius: 0 25px 25px 0;
+  border-right: 0;
+  width: 15%;
+  height: 100%;
+  color: white;
+  background-color: rgb(197, 18, 42);
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  justify-content: center;
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-wrapper .swiper-slide {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transform: scale(0.8);
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-wrapper .swiper-slide .money-domain {
+  font-weight: bold;
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-wrapper .swiper-slide .gift-icon {
+  background-color: rgb(197, 18, 42);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-wrapper .swiper-slide .gift-icon i {
+  color: white;
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-prev, .banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-prev i, .banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-next i {
+  font-size: 16px;
+  color: rgb(197, 18, 42);
+  font-weight: 900;
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-prev {
+  left: -10px;
+  padding-right: 10px;
+}
+.banner .nina-box-domain .form-register-domain .nina-swiper-slide-domain .swiper .swiper-next {
+  right: -10px;
+  padding-left: 10px;
+}
+
+.nina-overlay {
+  position: absolute;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.nina-overlay .nina-img-ani {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+.nina-overlay .nina-img-ani .img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+  z-index: 11;
+  filter: brightness(1.1);
+}
+
+.nina-service-page {
+  z-index: 99;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background-color: white;
+  overflow: hidden;
+}
+.nina-service-page .nina-container-service {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/service-page.png);
+  -o-object-position: -20% -25%;
+     object-position: -20% -25%;
+  background-size: 150%;
+}
+.nina-service-page .nina-container-service .nina-service-box {
+  display: flex;
+  height: 100%;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_float {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_float .nina-service-box_float_images {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_float .nina-service-box_float_images .nina-service-box_float_images__bg {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-image: url("https://nina.vn/assets/images/services/cercle-shape.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  animation: rotage-bg 20s linear infinite;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_float .nina-service-box_float_images .nina-service-box_float_images__child {
+  width: 45%;
+  z-index: 2;
+}
+@keyframes rotage-bg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right {
+  padding: 20px;
+  flex: 1;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item {
+  width: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-icon {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -1%;
+  z-index: 10;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-icon .icon-box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  -webkit-clip-path: circle(40% at 50% 50%);
+          clip-path: circle(40% at 50% 50%);
+  background-color: #fff7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-icon .icon-box .nina-service-icon {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-icon .icon-box .nina-service-icon img {
+  width: auto;
+  height: 65%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 10px;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-icon .dot {
+  border-radius: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg) translateX(40px);
+  animation: orbit 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-icon .dot1 {
+  background-color: rgb(153, 227, 255);
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-icon .dot2 {
+  background-color: rgb(254, 76, 28);
+  animation-delay: -2s;
+}
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(40px);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(40px);
+  }
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-text {
+  width: 90%;
+  height: 65%;
+  padding-top: 15%;
+  position: relative;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-text:hover {
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-text .box-text {
+  text-align: center;
+  width: 100%;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-text .box-text h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap .nina-service-text .box-text p {
+  font-size: 14px;
+}
+.nina-service-page .nina-container-service .nina-service-box .nina-service-box_right .nina-service-content .nina-service-item .nina-service-wrap:hover .dot {
+  display: flex;
+  z-index: 11;
+  opacity: 1;
+}
+
+.nina-domain-page {
+  width: 100%;
+  height: 180vh;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.nina-domain-page .nina-domain-page_box-image {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+.nina-domain-page .nina-domain-page_box-image .image-pattern_left,
+.nina-domain-page .nina-domain-page_box-image .image-pattern_right {
+  margin-top: -13%;
+}
+.nina-domain-page .nina-domain-page_box-image .image-pattern_left img,
+.nina-domain-page .nina-domain-page_box-image .image-pattern_right img {
+  width: 100%;
+  height: 100%;
+}
+.nina-domain-page .nina-domain-page_box-image .image-pattern_right {
+  padding-top: 20%;
+}
+.nina-domain-page .nina-domain-page_box-container {
+  width: 100%;
+  height: 85%;
+  z-index: 11;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 1%;
+}
+.nina-domain-page .nina-domain-page_box-container .animate-border {
+  position: relative;
+  width: 115px;
+  background-color: rgb(197, 18, 42);
+  height: 3px;
+  overflow: hidden;
+}
+.nina-domain-page .nina-domain-page_box-container .animate-border::after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 3px;
+  left: 15px;
+  bottom: 0;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  animation: animborder 2s linear infinite;
+}
+@keyframes animborder {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(113px);
+  }
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 {
+  font-size: 14px;
+  padding: 8% 0;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -3%;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 h3 {
+  color: rgb(197, 18, 42);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 p {
+  padding-top: 10px;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-domain-page_box__column-domain {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 5px;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-domain-page_box__column-domain .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin: 10px;
+  width: 95%;
+  height: 7vh;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+  background-color: white;
+  transform: perspective(1px) translateZ(0);
+  transition: 0.4s;
+  position: relative;
+  z-index: 3;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-domain-page_box__column-domain .item span {
+  color: rgb(197, 18, 42);
+  font-weight: 700;
+  transition: transform 0.4s ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-domain-page_box__column-domain .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: #F9E7E9;
+  border-radius: 50px;
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+          clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+  opacity: 1;
+  transition: 0.4s;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-domain-page_box__column-domain .item:hover::before {
+  -webkit-clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+          clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-domain-page_box__column-domain .item .item_icon-shopping-cart-domain {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  right: 10px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(197, 18, 42);
+  right: 10px;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-domain-page_box__column-domain .item:hover .item_icon-shopping-cart-domain {
+  opacity: 1;
+  transform: translateX(-10px);
+  z-index: 2;
+  transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-domain-page_box__column-domain .item:hover span {
+  transform: translateX(-45px);
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-readmore {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: perspective(1px) translateZ(0);
+  transition: opacity 0.4s ease;
+  position: relative;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-readmore .nina-readmore_btn {
+  width: 30%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgb(197, 18, 42);
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  font-size: 16px;
+  transition: width 0.4s ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-readmore .nina-readmore_btn .nina-readmore_btn__text {
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4 ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-readmore .nina-readmore_btn .icon-arrow-right {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 5px;
+  padding: 0 10px;
+  border-radius: 50%;
+  background-color: #FF585D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-readmore .nina-readmore_btn:hover {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-readmore .nina-readmore_btn:hover .nina-readmore_btn__text {
+  padding-left: -10px;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-readmore .nina-readmore_btn:hover .icon-arrow-right {
+  padding-left: 10px;
+  opacity: 1;
+  transform: translateX(20px);
+  z-index: 2;
+  transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box1 .nina-readmore .nina-readmore_btn:hover .nina-readmore_btn__text {
+  transform: translateX(-10px);
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box2 {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box3 {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 1%;
+  box-sizing: border-box;
+  margin-top: -2%;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box3 img {
+  width: 100%;
+  height: auto;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 {
+  font-size: 14px;
+  padding: 8% 0;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -8%;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 h3 {
+  color: rgb(197, 18, 42);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 p {
+  padding-top: 10px;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-domain-page_box__column-domain {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 5px;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-domain-page_box__column-domain .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin: 10px;
+  width: 95%;
+  height: 7vh;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+  background-color: white;
+  transform: perspective(1px) translateZ(0);
+  transition: 0.4s;
+  position: relative;
+  z-index: 3;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-domain-page_box__column-domain .item span {
+  color: rgb(197, 18, 42);
+  font-weight: 700;
+  transition: transform 0.4s ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-domain-page_box__column-domain .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: #F9E7E9;
+  border-radius: 50px;
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+          clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+  opacity: 1;
+  transition: 0.4s;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-domain-page_box__column-domain .item:hover::before {
+  -webkit-clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+          clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-domain-page_box__column-domain .item .item_icon-shopping-cart-domain {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  right: 10px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(197, 18, 42);
+  right: 10px;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-domain-page_box__column-domain .item:hover .item_icon-shopping-cart-domain {
+  opacity: 1;
+  transform: translateX(-10px);
+  z-index: 2;
+  transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-domain-page_box__column-domain .item:hover span {
+  transform: translateX(-45px);
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-readmore {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: perspective(1px) translateZ(0);
+  transition: opacity 0.4s ease;
+  position: relative;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-readmore .nina-readmore_btn {
+  width: 30%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgb(197, 18, 42);
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  font-size: 16px;
+  transition: width 0.4s ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-readmore .nina-readmore_btn .nina-readmore_btn__text {
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4 ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-readmore .nina-readmore_btn .icon-arrow-right {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 5px;
+  padding: 0 10px;
+  border-radius: 50%;
+  background-color: #FF585D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-readmore .nina-readmore_btn:hover {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-readmore .nina-readmore_btn:hover .nina-readmore_btn__text {
+  padding-left: -10px;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-readmore .nina-readmore_btn:hover .icon-arrow-right {
+  padding-left: 10px;
+  opacity: 1;
+  transform: translateX(20px);
+  z-index: 2;
+  transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+}
+.nina-domain-page .nina-domain-page_box-container .nina-domain-page_box-container__box4 .nina-readmore .nina-readmore_btn:hover .nina-readmore_btn__text {
+  transform: translateX(-10px);
+}
+
+.nina-hosting-page {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 130vh;
+  background-image: linear-gradient(#FBF3F4, #fff);
+  padding: 2% 1%;
+}
+.nina-hosting-page .nina-hosting-page_container {
+  width: 100%;
+  height: 100%;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__title .text-h3-hosting {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: rgb(197, 18, 42);
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__title .animate-border {
+  position: relative;
+  width: 115px;
+  background-color: rgb(197, 18, 42);
+  height: 3px;
+  overflow: hidden;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__title .animate-border::after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 3px;
+  left: 15px;
+  bottom: 0;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  animation: animborder 2s linear infinite;
+}
+@keyframes animborder {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(113px);
+  }
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__tabs {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__tabs .nina-hosting-nav-tabs {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__tabs .nina-hosting-nav-tabs .tabs1 {
+  background-color: rgb(197, 18, 42);
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__tabs .nina-hosting-nav-tabs .tabs {
+  padding: 0 20px;
+  height: 2.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__tabs .nina-hosting-nav-tabs .tabs:hover {
+  background-color: rgb(197, 18, 42);
+  border-radius: 50px;
+  color: white;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  margin: 80px 0;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 120%;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  transform: scale(0.8);
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .money-domain {
+  font-weight: bold;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .gift-icon {
+  background-color: rgb(197, 18, 42);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .gift-icon i {
+  color: white;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_header {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_header .nina-item-hosting_header__title {
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_header .nina-item-hosting_header__title h2 {
+  font-size: 1.5rem;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_header .nina-item-hosting_header__title .nina-desc {
+  width: 4rem;
+  height: 5px;
+  background-color: white;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_header .nina-item-hosting_header__price {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-color: white;
+  top: 12%;
+  border-radius: 50%;
+  border: 15px solid #437ccf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_header .nina-item-hosting_header__price .price1,
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_header .nina-item-hosting_header__price .price3 {
+  font-size: 20px;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_header .nina-item-hosting_header__price .price2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(197, 18, 42);
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header1 {
+  background-color: rgb(82, 145, 236);
+  border-bottom: 15px solid #437ccf;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header1 .nina-item-hosting_header__price {
+  border: 15px solid #437ccf;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header2 {
+  background-color: #FFC600;
+  border-bottom: 15px solid #E6B302;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header2 .nina-item-hosting_header__price {
+  border: 15px solid #E6B302;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header3 {
+  background-color: #C30E13;
+  border-bottom: 15px solid #AC090E;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header3 .nina-item-hosting_header__price {
+  border: 15px solid #AC090E;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header4 {
+  background-color: #3FB130;
+  border-bottom: 15px solid #319B23;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header4 .nina-item-hosting_header__price {
+  border: 15px solid #319B23;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header5 {
+  background-color: #9B59B6;
+  border-bottom: 15px solid #7C4791;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header5 .nina-item-hosting_header__price {
+  border: 15px solid #7C4791;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header6 {
+  background-color: #0069D1;
+  border-bottom: 15px solid #004B97;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .item-hosting_header6 .nina-item-hosting_header__price {
+  border: 15px solid #004B97;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_body {
+  width: 100%;
+  min-height: 50%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_body ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-top: 15%;
+  font-size: 18px;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_body ul > li {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(245, 245, 245);
+  padding: 0 15px;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_body ul > li .text-hosting_left .text-hosting {
+  float: left;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_body ul > li .text-hosting_left .text-hosting-vat {
+  font-size: 15px;
+  font-style: italic;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-item-hosting_body ul > li .text-hosting_right .money-hosting {
+  font-size: 18px;
+  font-weight: bold;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-readmore {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: perspective(1px) translateZ(0);
+  transition: opacity 0.4s ease;
+  position: relative;
+  margin: 10px;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-readmore .nina-readmore_btn {
+  width: 40%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgb(197, 18, 42);
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  font-size: 18px;
+  transition: width 0.4s ease;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-readmore .nina-readmore_btn .nina-readmore_btn__text {
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4 ease;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-readmore .nina-readmore_btn .icon-arrow-right {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 5px;
+  padding: 0 10px;
+  border-radius: 50%;
+  background-color: #FF585D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-readmore .nina-readmore_btn:hover {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-readmore .nina-readmore_btn:hover .nina-readmore_btn__text {
+  padding-left: -10px;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-readmore .nina-readmore_btn:hover .icon-arrow-right {
+  padding-left: 10px;
+  opacity: 1;
+  transform: translateX(20px);
+  z-index: 2;
+  transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-wrapper .swiper-slide .nina-item-hosting .nina-readmore .nina-readmore_btn:hover .nina-readmore_btn__text {
+  transform: translateX(-10px);
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-prev,
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-prev i,
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-next i {
+  font-size: 16px;
+  color: rgb(197, 18, 42);
+  font-weight: 900;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-prev {
+  left: -10px;
+  padding-right: 10px;
+}
+.nina-hosting-page .nina-hosting-page_container .nina-hosting-page_container__table .swiper .swiper-next {
+  right: -10px;
+  padding-left: 10px;
+}
+
+.table-web-design {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #fcf3f4;
+  height: auto;
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+.table-web-design .table-web-design_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.table-web-design .table-web-design_header h2 {
+  color: rgb(197, 18, 42);
+}
+.table-web-design .table-web-design_header .table-web-design_header__text {
+  padding-top: 15px;
+}
+.table-web-design .table-web-design_header .animate-border {
+  position: relative;
+  width: 115px;
+  background-color: rgb(197, 18, 42);
+  height: 3px;
+  overflow: hidden;
+}
+.table-web-design .table-web-design_header .animate-border::after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 3px;
+  left: 15px;
+  bottom: 0;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  animation: animborder 2s linear infinite;
+}
+@keyframes animborder {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(113px);
+  }
+}
+.table-web-design .table-web-design_body-table {
+  width: 100%;
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 10px 20px;
+}
+.table-web-design .table-web-design_body-table .item-design {
+  width: 97%;
+  height: 684px;
+  margin: 10px 15px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  justify-content: center;
+  background-color: white;
+  box-sizing: border-box;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header {
+  width: 100%;
+  height: 130px;
+  text-align: center;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__title {
+  font-size: 30px;
+  font-weight: 500;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  color: white;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav .item-design__text-contact {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav1 {
+  background-image: linear-gradient(90deg, #F38320 0, #EF3424 100%);
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav8 {
+  background-image: linear-gradient(90deg, #007B89 0, #00A177 100%);
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav9 {
+  background-image: linear-gradient(90deg, #6604FF 0, #5259FF 100%);
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav2 {
+  background-image: linear-gradient(90deg, #F81219 0, #DA1016 100%);
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav3 {
+  background-image: linear-gradient(90deg, #3DAD2E 0, #329D24 100%);
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav4 {
+  background-image: linear-gradient(90deg, #9A58B5 0, #7D4893 100%);
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav5 {
+  background-image: linear-gradient(90deg, #007CFA 0, #0066CF 100%);
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav6 {
+  background-image: linear-gradient(90deg, #3D9F97 0, #2E7671 100%);
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_header .item-design_header__nav7 {
+  background-image: linear-gradient(90deg, #2BC8AB 0, #229F89 100%);
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_body {
+  display: block;
+  width: 100%;
+  height: 72%;
+  position: relative;
+  padding: 10px 0;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_body .item-design_body__text {
+  font-size: 15px;
+  color: black;
+  padding-left: 0;
+  padding: 10px 10px;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_body .item-design_body__text li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  height: 7vh;
+  border-bottom: 1px dashed gray;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_body .item-design_body__text li span {
+  margin-right: 10px;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_body .item-design_body__text li p {
+  font-size: 16px;
+  margin: 0;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 61px;
+  background-color: #00778C;
+  border-radius: 0 0 10px 10px;
+  color: white;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_footer i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.table-web-design .table-web-design_body-table .item-design .item-design_footer span {
+  font-size: 26px;
+  font-weight: 400;
+}
+.table-web-design .table-web-design_body-table .item-design1 {
+  border-color: #F49020;
+  color: #F49020;
+}
+.table-web-design .table-web-design_body-table .item-design1 .item-design_footer {
+  background-image: linear-gradient(90deg, #F38320 0, #EF3424 100%);
+}
+.table-web-design .table-web-design_body-table .item-design2 {
+  border-color: #00778C;
+  color: #00778C;
+}
+.table-web-design .table-web-design_body-table .item-design2 .item-design_footer {
+  background-image: linear-gradient(90deg, #007B89 0, #00A177 100%);
+}
+.table-web-design .table-web-design_body-table .item-design3 {
+  border-color: #6700FF;
+  color: #6700FF;
+}
+.table-web-design .table-web-design_body-table .item-design3 .item-design_footer {
+  background-image: linear-gradient(90deg, #6604FF 0, #5259FF 100%);
+}
+.table-web-design .table-web-design_body-table .item-design4 {
+  border-color: #FD1219;
+  color: #FD1219;
+}
+.table-web-design .table-web-design_body-table .item-design4 .item-design_footer {
+  background-image: linear-gradient(90deg, #F81219 0, #DA1016 100%);
+}
+.table-web-design .table-web-design_body-table .item-design5 {
+  border-color: #3FB130;
+  color: #3FB130;
+}
+.table-web-design .table-web-design_body-table .item-design5 .item-design_footer {
+  background-image: linear-gradient(90deg, #3DAD2E 0, #329D24 100%);
+}
+.table-web-design .table-web-design_body-table .item-design6 {
+  border-color: #9B59B6;
+  color: #9B59B6;
+}
+.table-web-design .table-web-design_body-table .item-design6 .item-design_footer {
+  background-image: linear-gradient(90deg, #9A58B5 0, #7D4893 100%);
+}
+.table-web-design .table-web-design_body-table .item-design7 {
+  border-color: #007FFF;
+  color: #007FFF;
+}
+.table-web-design .table-web-design_body-table .item-design7 .item-design_footer {
+  background-image: linear-gradient(90deg, #007CFA 0, #0066CF 100%);
+}
+.table-web-design .table-web-design_body-table .item-design8 {
+  border-color: #3EA199;
+  color: #3EA199;
+}
+.table-web-design .table-web-design_body-table .item-design8 .item-design_footer {
+  background-image: linear-gradient(90deg, #3D9F97 0, #2E7671 100%);
+}
+.table-web-design .table-web-design_body-table .item-design8 .item-design9 {
+  border-color: #2BC9AC;
+  color: #2BC9AC;
+}
+.table-web-design .table-web-design_body-table .item-design8 .item-design9 .item-design_footer {
+  background-image: linear-gradient(90deg, #2BC8AB 0, #229F89 100%);
+}
+.table-web-design .table-web-design_body-table .nina-shape .nina-shape_custom {
+  background-color: #fcf3f4;
+}
+
+.nina-process-page {
+  margin: 50px 0;
+  width: 100%;
+  height: 120vh;
+  background-image: linear-gradient(#fefdfd, #fcf4f5);
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+}
+.nina-process-page .icon1 {
+  float: right;
+  margin-top: -20px;
+  margin-right: 200px;
+}
+.nina-process-page .icon2 {
+  margin: 0; /* Loại bỏ khoảng trống */
+  padding: 0; /* Loại bỏ khoảng trống */
+  margin-left: 250px;
+  margin-bottom: -40px;
+}
+.nina-process-page .icon3 {
+  float: left;
+  margin-left: 20%;
+}
+.nina-process-page .icon4 {
+  float: right;
+  margin-top: 300px;
+  margin-right: -500px;
+}
+.nina-process-page .icon5 {
+  margin-top: 50px;
+  margin-left: 50%;
+}
+.nina-process-page .icon6 {
+  float: right;
+  margin-top: -30px;
+  margin-right: 150px;
+}
+.nina-process-page .box-icon-image1 {
+  animation: rotatemeOne 12s infinite linear;
+}
+.nina-process-page .box-icon-image2 {
+  animation: rotateme 12s infinite linear;
+}
+.nina-process-page .box-icon-image3 {
+  animation: jump 3s infinite linear;
+}
+@keyframes rotatemeOne {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotateme {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  40% {
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.nina-process-page .nina-container {
+  width: 100%;
+}
+.nina-process-page .nina-container .nina-process-page_header {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.nina-process-page .nina-container .nina-process-page_header h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(197, 18, 42);
+}
+.nina-process-page .nina-container .nina-process-page_header .animate-border {
+  position: relative;
+  width: 115px;
+  background-color: rgb(197, 18, 42);
+  height: 3px;
+  overflow: hidden;
+}
+.nina-process-page .nina-container .nina-process-page_header .animate-border::after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 3px;
+  left: 15px;
+  bottom: 0;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  animation: animborder 2s linear infinite;
+}
+@keyframes animborder {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(113px);
+  }
+}
+.nina-process-page .nina-container .nina-process-page_body {
+  width: 100%;
+  position: relative;
+  margin: 5% 0;
+}
+.nina-process-page .nina-container .nina-process-page_body svg {
+  width: 100%;
+  margin-top: 5%;
+}
+.nina-process-page .nina-container .nina-process-page_body svg .stroke-2 {
+  stroke-width: 2;
+}
+.nina-process-page .nina-container .nina-process-page_body svg .fill-none {
+  fill: none;
+}
+.nina-process-page .nina-container .nina-process-page_body svg .stroke-\[\#919191\] {
+  stroke: #919191;
+}
+.nina-process-page .nina-container .nina-process-page_body svg .animate-stroke {
+  animation: stroke 10s linear infinite;
+}
+@keyframes stroke {
+  0% {
+    stroke-dasharray: 15.0406, 15.0406;
+    stroke-dashoffset: 600;
+  }
+  100% {
+    stroke-dasharray: 15.0406, 15.0406;
+    stroke-dashoffset: 0;
+  }
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .nina-process-item-cycle {
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 50%;
+  padding: 30px 30px;
+  box-sizing: border-box;
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+  transition: 0.4s;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .nina-process-item-cycle .count {
+  position: absolute;
+  float: right;
+  right: 5px;
+  top: -50px;
+  font-size: 50px;
+  font-weight: 700;
+  color: rgb(197, 18, 42);
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .nina-process-item-cycle .item-cycle_img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 11;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .nina-process-item-cycle .item-cycle_img img {
+  width: 70px;
+  height: 70px;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .nina-process-item-cycle .item-cycle_img h3 {
+  margin-top: 10px;
+  width: 60%;
+  font-size: 15px;
+  font-weight: 700;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .nina-process-item-cycle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #F92C08 0, #CF1724 100%);
+  transition: 0.4s;
+  -webkit-clip-path: circle(0% at 10% 79%);
+          clip-path: circle(0% at 10% 79%);
+  border-radius: 50%;
+  display: flex;
+  z-index: -1;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .nina-process-item-cycle:hover::before {
+  -webkit-clip-path: circle(118.8% at 10% 79%);
+          clip-path: circle(118.8% at 10% 79%);
+  border-radius: 50%;
+  display: flex;
+  z-index: -1;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .nina-process-item-cycle:hover .count {
+  animation: shake 0.5s ease-in-out both;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20%, 60% {
+    transform: rotate(-20deg);
+  }
+  40%, 80% {
+    transform: rotate(20deg);
+  }
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .item-cycle1 {
+  margin-top: 70px;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .item-cycle3 {
+  margin-top: 90px;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .item-cycle4 {
+  margin-top: 140px;
+}
+.nina-process-page .nina-container .nina-process-page_body .nina-process-page_box .item-cycle5 {
+  margin-top: 100px;
+}
+
+.nina-benefit-page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1500px;
+}
+.nina-benefit-page .nina-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: linear-gradient(#FFFEFE, #FCF3F4);
+}
+.nina-benefit-page .nina-container .nina-benefit-box1 {
+  width: 100%;
+  padding: 10% 1%;
+}
+.nina-benefit-page .nina-container .nina-benefit-box1 .nina-benefit_img {
+  position: absolute;
+  margin-top: -47%;
+  display: flex;
+  z-index: 1;
+}
+.nina-benefit-page .nina-container .nina-benefit-box1 .nina-benefit-box1_header {
+  padding: 0 10px;
+}
+.nina-benefit-page .nina-container .nina-benefit-box1 .nina-benefit-box1_header h2 {
+  width: 80%;
+  font-size: 34px;
+  font-weight: 700;
+  color: rgb(197, 18, 42);
+}
+.nina-benefit-page .nina-container .nina-benefit-box1 .nina-benefit-box1_header p {
+  width: 100%;
+  font-size: 14px;
+}
+.nina-benefit-page .nina-container .nina-benefit-box1 .nina-benefit-box1_body {
+  padding: 0 10px;
+  margin-top: 50px;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-1 {
+  margin-top: 150px;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-1 .item-benefit_child {
+  margin-top: 40px;
+  width: 310px;
+  height: 320px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+  padding: 20px 25px;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-1 .item-benefit_child .img-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: #16A34A;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-1 .item-benefit_child .img-icon1 {
+  background-color: #16A34A;
+  -webkit-mask: url(https://media.nina.vn/upload/news/price-tag-3-line-3515.svg) no-repeat center;
+          mask: url(https://media.nina.vn/upload/news/price-tag-3-line-3515.svg) no-repeat center;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-1 .item-benefit_child .img-icon2 {
+  background-color: #A85CEF;
+  -webkit-mask: url(https://media.nina.vn/upload/news/time-line-3277.svg) no-repeat center;
+          mask: url(https://media.nina.vn/upload/news/time-line-3277.svg) no-repeat center;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-1 .item-benefit_child .item-benefit_child_body {
+  margin-bottom: 20px;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-1 .item-benefit_child:hover {
+  transform: translateY(-0.5rem);
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-2 .item-benefit_child {
+  margin-top: 40px;
+  width: 310px;
+  height: 320px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+  padding: 20px 25px;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-2 .item-benefit_child .img-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: #16A34A;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-2 .item-benefit_child .img-icon3 {
+  background-color: #EA580C;
+  -webkit-mask: url(https://media.nina.vn/upload/news/shake-hands-line-6683.svg) no-repeat center;
+          mask: url(https://media.nina.vn/upload/news/shake-hands-line-6683.svg) no-repeat center;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-2 .item-benefit_child .img-icon4 {
+  background-color: #65A30D;
+  -webkit-mask: url(https://media.nina.vn/upload/news/seo-line-1540.svg) no-repeat center;
+          mask: url(https://media.nina.vn/upload/news/seo-line-1540.svg) no-repeat center;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-2 .item-benefit_child .img-icon5 {
+  background-color: #DB2777;
+  -webkit-mask: url(https://media.nina.vn/upload/news/customer-service-2-fill-3390.svg) no-repeat center;
+          mask: url(https://media.nina.vn/upload/news/customer-service-2-fill-3390.svg) no-repeat center;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-2 .item-benefit_child .item-benefit_child_body {
+  margin-bottom: 20px;
+}
+.nina-benefit-page .nina-container .nina-benefit-box2 .item-benefit-box2-2 .item-benefit_child:hover {
+  transform: translateY(-0.5rem);
+}
+.nina-benefit-page .nina-container .nina-bottom {
+  grid-column: span 2;
+  width: 100%;
+  height: 70vh;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+}
+.nina-benefit-page .nina-container .nina-bottom .nina-benefit-page_bottom {
+  width: 100%;
+  height: 100%;
+}
+.nina-benefit-page .nina-container .nina-bottom .nina-benefit-page_bottom h3 {
+  font-size: 35px;
+  font-weight: 700;
+}
+.nina-benefit-page .nina-container .nina-bottom .nina-benefit-page_bottom .nina-benefit-page_bottom__header {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #5E6471;
+}
+.nina-benefit-page .nina-container .nina-bottom .nina-benefit-page_bottom .nina-benefit-page_bottom__header p {
+  font-size: 20px;
+}
+.nina-benefit-page .nina-container .nina-bottom .nina-benefit-page_bottom .nina-benefit-page_bottom__header .nina-box-span {
+  font-size: 34px;
+  font-weight: 700;
+  color: #FC9725;
+}
+.nina-benefit-page .nina-container .nina-bottom .nina-benefit-page_bottom .nina-benefit-page_bottom__box-body {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+}
+.nina-benefit-page .nina-container .nina-bottom .nina-benefit-page_bottom .nina-benefit-page_bottom__box-body .box-body {
+  width: 670px;
+  height: 160px;
+  background-color: rgb(197, 18, 42);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.nina-benefit-page .nina-container .nina-bottom .nina-benefit-page_bottom .nina-benefit-page_bottom__box-body .box-body p {
+  font-size: 20px;
+}
+
+.nina-footer {
+  width: 100%;
+  height: 90vh;
+}
+.nina-footer .nina-footer_box1 {
+  width: 100%;
+  height: 50%;
+  --bs-gutter-x: 0;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 {
+  width: 45%;
+  --bs-gutter-x: 0;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box1 {
+  width: 50%;
+  padding: 20px;
+  border-right: 1px solid gray;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box1 .infoList {
+  padding-left: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: height 0.5s ease-in;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box1 .infoList.show {
+  height: 0;
+  transition: height 0.5s ease-out;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box1 ul > li {
+  list-style: none;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box1 ul > li:hover {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(197, 18, 42);
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box2 {
+  width: 50%;
+  padding: 20px;
+  border-right: 1px solid gray;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box2 .infoList {
+  padding-left: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: height 0.5s ease-in;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box2 .infoList.show {
+  height: 0;
+  transition: height 0.5s ease-out;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box2 ul > li {
+  display: flex;
+  list-style: none;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item1 .nina-footer_box1__child-item1___box2 ul > li:hover {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(197, 18, 42);
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 {
+  width: 55%;
+  --bs-gutter-x: 0;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box1 {
+  width: 40%;
+  padding: 20px;
+  border-right: 1px solid gray;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box1 .infoList {
+  padding-left: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: height 0.5s ease-in;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box1 .infoList.show {
+  height: 0;
+  transition: height 0.5s ease-out;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box1 ul > li {
+  list-style: none;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box1 ul > li:hover {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(197, 18, 42);
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 {
+  width: 60%;
+  padding: 20px;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 h4 {
+  color: rgb(197, 18, 42);
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .text-gray {
+  color: gray;
+  font-size: 13px;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-contact {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(197, 18, 42);
+  border-radius: 50px;
+  color: rgb(197, 18, 42);
+  transform: translateX(10px);
+  transition: transform 0.4s ease;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-contact p {
+  margin: 0;
+  padding: 0;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-contact:hover {
+  width: 160px;
+  background-color: rgb(197, 18, 42);
+  color: white;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-contact:hover i {
+  transform: translateX(10px);
+  transition: transform 0.4s ease 0.1s;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-bottom {
+  width: 100%;
+  height: 54%;
+  display: flex;
+  --bs-gutter-x: 0;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-bottom .box-bottom_item1 {
+  width: 35%;
+  height: 100%;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-bottom .box-bottom_item1 .box-bottom_item1__box {
+  font-size: 13px;
+  padding: 10px 0;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-bottom .box-bottom_item1 .box-bottom_item1__box span {
+  color: rgb(197, 18, 42);
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-bottom .box-bottom_item2 {
+  width: 65%;
+  height: 100%;
+  --bs-gutter-x: 0;
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-bottom .box-bottom_item2 .box-bottom_item2__box {
+  width: 125px;
+  height: 39;
+}
+.nina-footer .nina-footer_box1 .nina-footer_box1__child-item2 .nina-footer_box1__child-item2___box2 .box-bottom .box-bottom_item2 .box-bottom_item2__box img {
+  width: 100%;
+}
+.nina-footer .nina-footer_box2 {
+  width: 100%;
+  height: 50%;
+  background-color: #C5122A;
+  padding: 20px 10px;
+}
+.nina-footer .nina-footer_box2 .nina-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  --bs-gutter-x: 0;
+}
+.nina-footer .nina-footer_box2 .nina-container .nina-footer_box2__item1 {
+  width: 17%;
+}
+.nina-footer .nina-footer_box2 .nina-container .nina-footer_box2__item1 img {
+  padding: 5px 0;
+}
+.nina-footer .nina-footer_box2 .nina-container .nina-footer_box2__item2 {
+  width: 50%;
+  color: white;
+  padding: 10px 0;
+}
+.nina-footer .nina-footer_box2 .nina-container .nina-footer_box2__item2 p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.nina-footer .nina-footer_box2 .nina-container .nina-footer_box2__item3 {
+  width: 33%;
+}
+.nina-footer .nina-footer_box2 .nina-container .nina-footer_box2__item3 p {
+  color: white;
+  padding-top: 120px;
+  font-size: 14px;
+  float: right;
+  right: 10px;
+}
+.nina-footer .nina-footer_box2 .nina-container .nina-footer_box2__item3 .text-footer {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.nina-phone {
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid rgb(244, 5, 37);
+  background-color: #bd0019;
+}
+.nina-phone .nina-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.nina-phone .nina-container .nina-phone_item {
+  width: 150px;
+  height: 100%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  transform: perspective(1px) translateZ(0);
+  transition: 0.4s;
+}
+.nina-phone .nina-container .nina-phone_item .icon-phone {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.nina-phone .nina-container .nina-phone_item .text-name-phone {
+  padding-left: 20px;
+  font-size: 14px;
+  height: auto;
+  color: white;
+}
+.nina-phone .nina-container .nina-phone_item .text-name-phone p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.nina-phone .nina-container .nina-phone_item .text-name-phone span {
+  font-size: 0.875rem;
+}
+.nina-phone .nina-container .nina-phone_item:hover {
+  transform: translateY(-0.2rem);
+}
+.nina-phone .nina-container .nina-phone_item:hover .icon-phone {
+  animation: shake 0.5s ease-in-out both;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20%, 60% {
+    transform: rotate(-20deg);
+  }
+  40%, 80% {
+    transform: rotate(20deg);
+  }
+}
+
+@media (max-width: 480px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  #nina-top-header {
+    display: none !important;
+  }
+  #nina-nav-menu {
+    display: block;
+    width: 100%;
+    height: 7vh;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+  }
+  #nina-nav-menu .nina-container-menu {
+    width: 100%;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #f3f4f6;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    z-index: 100;
+    text-align: left;
+    width: 80%;
+    padding: 20px 20px;
+    transition: 0.5s;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu .nina-logo-mobile {
+    display: block !important;
+    padding: 0 30%;
+    width: 100%;
+    border-bottom: 1px solid gray;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu .nina-logo-mobile img {
+    width: 140px;
+    height: 70px;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu .cart-mobile {
+    display: block !important;
+    background-color: #fc9725;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu .cart-mobile li {
+    display: flex !important;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu .cart-mobile .cart-mobile_icon:hover {
+    all: unset;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu .cart-mobile .crosshair-mobile {
+    all: unset;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu .cart-mobile:hover {
+    all: unset;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu li {
+    margin: 10px 0;
+  }
+  #nina-nav-menu .nina-container-menu .nina-menu .hidden-mobile {
+    display: none;
+  }
+  #nina-nav-menu .nina-container-menu .nina-logo {
+    width: 118px;
+    height: 55px;
+    margin-left: 0.3rem !important;
+  }
+  #nina-nav-menu .nina-container-menu .nina-logo a img {
+    width: 100%;
+    height: 100%;
+  }
+  #nina-nav-menu .nina-container-menu .list-menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 17%;
+  }
+  #nina-nav-menu .nina-container-menu .list-menu .list-menu_text {
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fc9725;
+    align-items: center;
+  }
+  #nina-nav-menu .nina-container-menu .list-menu .list-menu_text p {
+    padding: 0 5px;
+    margin-bottom: 0;
+  }
+  #nina-nav-menu .nina-container-menu .list-menu .list-menu_icon {
+    padding-left: 10px;
+    color: rgb(197, 18, 42) !important;
+  }
+  #nina-nav-menu .nina-container-menu .list-menu .list-menu_icon i {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */

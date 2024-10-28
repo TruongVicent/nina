@@ -1,0 +1,75 @@
+.nina-phone {
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid rgb(244 5 37);
+    background-color: #bd0019;
+
+    .nina-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        .nina-phone_item {
+            width: 150px;
+            height: 100%;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            transform: perspective(1px) translateZ(0);
+            transition: 0.4s;
+
+            .icon-phone {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 38px;
+                height: 100%;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+            }
+            .text-name-phone {
+                padding-left: 20px;
+                font-size: 14px;
+                height: auto;
+                color: white;
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 0.875rem;
+                    font-weight: 700;
+                }
+                span {
+                    font-size: 0.875rem;
+                }
+            }
+
+            &:hover {
+                transform: translateY(-0.2rem);
+            }
+
+            &:hover .icon-phone{
+                animation: shake 0.5s ease-in-out both;
+            }
+
+            @keyframes shake {
+                0%, 100% {
+                    transform: rotate(0deg);
+                }
+                20%, 60% {
+                    transform: rotate(-20deg);
+                }
+                40% ,80% {
+                    transform: rotate(20deg);
+                }
+              
+            }
+
+        }
+    }
+}
